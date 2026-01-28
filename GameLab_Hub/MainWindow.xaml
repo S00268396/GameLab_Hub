@@ -3,10 +3,44 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:GameLab_Hub"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <TabControl TabStripPlacement = "Left">
+        <TabItem>
+            <TabItem.Header>
+                <StackPanel Orientation="Vertical">
+                    <materialDesign:PackIcon Kind="Computer"
+                                             Width="25"
+                                             Height="25"
+                                             VerticalAlignment="Center"
+                                             Margin ="0,0,10,0"
+                                             Foreground="#4B0082"/>
+                    <TextBlock Text="Search Software"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Foreground="#8A2BE2"/>                    
+                </StackPanel>
+            </TabItem.Header>
+        </TabItem>
 
-    </Grid>
+        <TabItem>
+            <TabItem.Header>
+                <StackPanel Orientation="Vertical">
+                    <materialDesign:PackIcon Kind="Run"
+                                       Width="25"
+                                       Height="25"
+                                       VerticalAlignment="Center"
+                                       Margin ="0,0,10,0"
+                                       Foreground ="orange"/>
+                    <TextBlock Text="Running"
+                         VerticalAlignment="Center"
+                         FontSize="16"
+                         Foreground="Orange"/>
+                </StackPanel>
+            </TabItem.Header>
+        </TabItem> 
+
+    </TabControl>
 </Window>
