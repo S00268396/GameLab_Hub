@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace GameLab_Hub
 {
-    public class Computer_Labs
+    public class Computer_Labs 
     {
         public string LabNumber { get; set; }
+        public string Location { get; set; }
         public int NumberOfComputers { get; set; }
         public string SotferwareInstalled { get; set; }
         public bool IsAvailable { get; set; }
-        public Computer_Labs(string labNumber, int numberOfComputers, string sotferwareInstalled, bool isAvailable)
+        public Computer_Labs(string labNumber, string location, int numberOfComputers, string sotferwareInstalled, bool isAvailable)
         {
             LabNumber = labNumber;
+            Location = location;
             SotferwareInstalled = sotferwareInstalled;
             NumberOfComputers = numberOfComputers;
             IsAvailable = isAvailable;
         }
 
-
-        public void DisplayLabInfo()
+        public override string ToString()
         {
-            Console.WriteLine($"Lab Name: {LabNumber}");
-            Console.WriteLine($"Number of Computers: {NumberOfComputers}");
-            Console.WriteLine($"Is Available: {IsAvailable}");
+            return LabNumber;
         }
     }
 }

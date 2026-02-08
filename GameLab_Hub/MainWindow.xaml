@@ -28,10 +28,10 @@
 
                 <ListBox x:Name="lbxListOfComputer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,38,521,10" SelectionChanged="lbxListOfComputer_SelectionChanged"/>
                 <Label x:Name="lblComputerlab" Content="Search:" HorizontalAlignment="Left" Margin="268,14,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray"/>
-                <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="319,14,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="319,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="tbxSearch_KeyUp"/>
                 <Button x:Name="btnTimetable" Content="Timetable" HorizontalAlignment="Left" Margin="652,303,0,0" VerticalAlignment="Top" Background="Cyan" BorderBrush="Cyan" Foreground="DarkSlateGray" FontWeight="Bold"/>
-                <Button x:Name="btnExamLabs" Content="Exam Labs" HorizontalAlignment="Left" Margin="457,303,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="DeepPink" Foreground="DarkSlateGray" BorderBrush="DeepPink"/>
-                <TextBlock x:Name="tblRoominfo" HorizontalAlignment="Left" Margin="483,46,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="220" Width="278"/>
+                <Button x:Name="btnExamLabs" Content="Exam Labs" HorizontalAlignment="Left" Margin="457,303,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="DeepPink" Foreground="DarkSlateGray" BorderBrush="DeepPink" Click="btnExamLabs_Click"/>
+                <TextBlock x:Name="tblRoominfo" HorizontalAlignment="Left" Margin="483,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="220" Width="278" Text="RoomInfo"/>
 
             </Grid>
         </TabItem>
