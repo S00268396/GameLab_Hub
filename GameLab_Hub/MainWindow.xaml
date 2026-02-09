@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:GameLab_Hub"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <TabControl TabStripPlacement = "Top">
+    <TabControl TabStripPlacement = "Top" Name="tabCTRL">
 
         <TabItem x:Name="tblmSearchSoftware" Loaded="tblmSearchSoftware_Loaded">
             <TabItem.Header>
@@ -53,7 +53,7 @@
             </TabItem.Header>
             <Grid>
                 <Calendar HorizontalAlignment="Left" Margin="266,12,0,0" VerticalAlignment="Top"/>
-                <Button x:Name="btnSearchSoftware1" Content="Search Software" HorizontalAlignment="Left" Margin="525,319,0,0" VerticalAlignment="Top" Background="Lime" BorderBrush="Lime" Foreground="#FF1E1E1E" FontWeight="Bold"/>
+                <Button x:Name="btnSearchSoftware1" Content="Search Software" HorizontalAlignment="Left" Margin="525,319,0,0" VerticalAlignment="Top" Background="Lime" BorderBrush="Lime" Foreground="#FF1E1E1E" FontWeight="Bold" Click="btnSearchSoftware1_Click"/>
                 <Button x:Name="btnExamsLabs" Content="Exams Labs" HorizontalAlignment="Left" Margin="686,319,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.255,0.516" Background="Cyan" BorderBrush="Cyan" Foreground="#FF1E1E1E" FontWeight="Bold"/>
             </Grid>
         </TabItem>
@@ -82,9 +82,9 @@
                 <ListBox x:Name="lbxComputerExam" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,38,218,10" Grid.ColumnSpan="2"/>
                 <ListBox x:Name="lbxSoftwareAndRoomNumber" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="391,51,36,99" RenderTransformOrigin="0.54,0.525" Grid.ColumnSpan="2" Grid.Column="1"/>
                 <Label x:Name="lblSearchExam" Content="Search:" HorizontalAlignment="Left" Margin="245,14,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray" Grid.Column="1"/>
-                <TextBox x:Name="tbxSearchExam" HorizontalAlignment="Left" Margin="296,14,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
                 <Button x:Name="btnTimetable1" Content="Timetable" HorizontalAlignment="Left" Margin="155,303,0,0" VerticalAlignment="Top" Grid.Column="2" Background="DarkOrange" FontWeight="Bold" BorderBrush="DarkOrange" Foreground="DarkSlateGray"/>
                 <Button x:Name="btnSearchSoftware" Content="Search Software" HorizontalAlignment="Left" Margin="434,303,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="SpringGreen" BorderBrush="SpringGreen" Foreground="DarkSlateGray" FontWeight="Bold" Grid.Column="1"/>
+                <ComboBox x:Name="cmbxSearch" Grid.Column="1" HorizontalAlignment="Left" Margin="299,14,0,0" VerticalAlignment="Top" Width="120"/>
 
             </Grid>
         </TabItem>

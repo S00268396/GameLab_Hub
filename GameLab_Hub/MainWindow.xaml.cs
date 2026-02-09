@@ -87,6 +87,12 @@ namespace GameLab_Hub
         {
         }
 
+        private void btnSearchSoftware1_Click(object sender, RoutedEventArgs e)
+        {
+            //set active tab to search software
+                tabCTRL.SelectedIndex = 0;
+        }
+
         //Exams Labs
     }
 }
