@@ -16,16 +16,19 @@ namespace GameLab_Hub
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Lists for Search Software Tab
         List<Computer_Labs> allComputer_lab = new List<Computer_Labs> ();
         List<Computer_Labs> filteredComputer_lab = new List<Computer_Labs>();
+
+        //Lists for Exam Labs Tab
+
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-
-        //For the Search Software
+        //Code for Search Software Tab
         private void tblmSearchSoftware_Loaded(object sender, RoutedEventArgs e)
         {
             Computer_Labs lab1 = new Computer_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
@@ -52,7 +55,7 @@ namespace GameLab_Hub
                 tblRoominfo.Text = $"Room Name: {selectedLab.LabNumber}\n" +
                     $"Number of Computers: {selectedLab.NumberOfComputers}\n" +
                     $"Software Installed: {selectedLab.SotferwareInstalled}\n" +
-                    $"Is Available: {(selectedLab.IsAvailable ? "Yes" : "No")}";
+                    $"Is Available: {(selectedLab.IsAvailable ? "Yes" : "No")}"; 
 
             }
         }
@@ -83,16 +86,35 @@ namespace GameLab_Hub
             }
         }
 
+        //Buttons in Search Software
         private void btnExamLabs_Click(object sender, RoutedEventArgs e)
         {
+            tabCTRL.SelectedIndex = 2;
+        }       
+        private void btnTimetable_Click(object sender, RoutedEventArgs e)
+        {
+            tabCTRL.SelectedIndex = 1;
         }
 
+        //Buttons in Timetable
+        private void btnExamsLabs_Click(object sender, RoutedEventArgs e)
+        {
+            tabCTRL.SelectedIndex = 2;
+        }
         private void btnSearchSoftware1_Click(object sender, RoutedEventArgs e)
         {
             //set active tab to search software
-                tabCTRL.SelectedIndex = 0;
+            tabCTRL.SelectedIndex = 0;
         }
 
-        //Exams Labs
+        //Buttons in Exam Labs
+        private void btnSearchSoftware_Click(object sender, RoutedEventArgs e)
+        {
+            tabCTRL.SelectedIndex = 0;
+        }
+        private void btnTimetable1_Click(object sender, RoutedEventArgs e)
+        {
+            tabCTRL.SelectedIndex = 1;
+        }
     }
 }
