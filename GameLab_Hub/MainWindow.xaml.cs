@@ -21,7 +21,7 @@ namespace GameLab_Hub
         List<Computer_Labs> filteredComputer_lab = new List<Computer_Labs>();
 
         //Lists for Exam Labs Tab
-
+        List<Exams_Labs> allExam_lab = new List<Exams_Labs>();
 
         public MainWindow()
         {
@@ -115,6 +115,40 @@ namespace GameLab_Hub
         private void btnTimetable1_Click(object sender, RoutedEventArgs e)
         {
             tabCTRL.SelectedIndex = 1;
+        }
+
+        //Code for Exam Labs Tab
+        private void tblmExams_Labs_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            Exams_Labs lab1 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+            Exams_Labs lab2 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+            Exams_Labs lab3 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+            Exams_Labs lab4 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+
+            allExam_lab.Add(lab1);
+            allExam_lab.Add(lab2);
+            allExam_lab.Add(lab3);
+            allExam_lab.Add(lab4);
+
+
+            lbxComputerExam.ItemsSource = allExam_lab;
+        }
+
+        private void lbxComputerExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Exams_Labs selectedExam = lbxComputerExam.SelectedItem as Exams_Labs;
+
+            if (selectedExam != null)
+            {
+
+                tblExaminfo.Text = $"Room Name: {selectedExam.LabNumber}\n" +
+                    $"Number of Computers: {selectedExam.NumberOfComputers}\n" +
+                    $"Software Installed: {selectedExam.SotferwareInstalled}\n" +
+                    $"Is Available: {(selectedExam.IsAvailable ? "Yes" : "No")}\n" +
+                    $"{selectedExam.TypeOfExam}";
+
+            }
         }
     }
 }
