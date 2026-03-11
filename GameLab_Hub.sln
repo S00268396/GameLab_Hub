@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLab_Hub", "GameLab_Hub\GameLab_Hub.csproj", "{1F80F2AE-87D3-4316-A5B7-1454E82B3B4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLab_Hub1", "GameLab_Hub\GameLab_Hub1.csproj", "{1F80F2AE-87D3-4316-A5B7-1454E82B3B4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagementCom", "DataManagementCom\DataManagementCom.csproj", "{1093C3A8-18AE-4D74-9022-3BA6218AFB2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLab_Hub", "WpfApp1\GameLab_Hub.csproj", "{C5AB4D5B-7BA0-4AB3-ADB1-E93E357EFC98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1F80F2AE-87D3-4316-A5B7-1454E82B3B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F80F2AE-87D3-4316-A5B7-1454E82B3B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F80F2AE-87D3-4316-A5B7-1454E82B3B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1093C3A8-18AE-4D74-9022-3BA6218AFB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1093C3A8-18AE-4D74-9022-3BA6218AFB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1093C3A8-18AE-4D74-9022-3BA6218AFB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1093C3A8-18AE-4D74-9022-3BA6218AFB2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5AB4D5B-7BA0-4AB3-ADB1-E93E357EFC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5AB4D5B-7BA0-4AB3-ADB1-E93E357EFC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5AB4D5B-7BA0-4AB3-ADB1-E93E357EFC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5AB4D5B-7BA0-4AB3-ADB1-E93E357EFC98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
