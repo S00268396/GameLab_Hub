@@ -17,11 +17,11 @@ namespace GameLab_Hub
     public partial class MainWindow : Window
     {
         //Lists for Search Software Tab
-        List<Computer_Labs> allComputer_lab = new List<Computer_Labs> ();
-        List<Computer_Labs> filteredComputer_lab = new List<Computer_Labs>();
+        List<Computer_Lab> allComputer_lab = new List<Computer_Lab> ();
+        List<Computer_Lab> filteredComputer_lab = new List<Computer_Lab>();
 
         //Lists for Exam Labs Tab
-        List<Exams_Labs> allExam_lab = new List<Exams_Labs>();
+        List<Exam_Lab> allExam_lab = new List<Exam_Lab>();
 
         public MainWindow()
         {
@@ -31,59 +31,59 @@ namespace GameLab_Hub
         //Code for Search Software Tab
         private void tblmSearchSoftware_Loaded(object sender, RoutedEventArgs e)
         {
-            Computer_Labs lab1 = new Computer_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
-            Computer_Labs lab2 = new Computer_Labs("Lab 2", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
-            Computer_Labs lab3 = new Computer_Labs("Lab 3", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
-            Computer_Labs lab4 = new Computer_Labs("Lab 4", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
+            //Computer_Lab lab1 = new Computer_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
+            //Computer_Lab lab2 = new Computer_Lab("Lab 2", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
+            //Computer_Lab lab3 = new Computer_Lab("Lab 3", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
+            //Computer_Lab lab4 = new Computer_Lab("Lab 4", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
 
-            allComputer_lab.Add(lab1);
-            allComputer_lab.Add(lab2);
-            allComputer_lab.Add(lab3);
-            allComputer_lab.Add(lab4);
+            //allComputer_lab.Add(lab1);
+            //allComputer_lab.Add(lab2);
+            //allComputer_lab.Add(lab3);
+            //allComputer_lab.Add(lab4);
 
 
-            lbxListOfComputer.ItemsSource = allComputer_lab;
+            //lbxListOfComputer.ItemsSource = allComputer_lab;
         }
 
         private void lbxListOfComputer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Computer_Labs selectedLab = lbxListOfComputer.SelectedItem as Computer_Labs;
+            //Computer_Lab selectedLab = lbxListOfComputer.SelectedItem as Computer_Lab;
 
-            if (selectedLab != null)
-            {
+            //if (selectedLab != null)
+            //{
 
-                tblRoominfo.Text = $"Room Name: {selectedLab.LabNumber}\n" +
-                    $"Number of Computers: {selectedLab.NumberOfComputers}\n" +
-                    $"Software Installed: {selectedLab.SotferwareInstalled}\n" +
-                    $"Is Available: {(selectedLab.IsAvailable ? "Yes" : "No")}"; 
+            //    tblRoominfo.Text = $"Room Name: {selectedLab.LabNumber}\n" +
+            //        $"Number of Computers: {selectedLab.NumberOfComputers}\n" +
+            //        $"Software Installed: {selectedLab.SotferwareInstalled}\n" +
+            //        $"Is Available: {(selectedLab.IsAvailable ? "Yes" : "No")}"; 
 
-            }
+            //}
         }
 
         private void tbxSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            string searchText = tbxSearch.Text;
+            //string searchText = tbxSearch.Text;
 
-            if (string.IsNullOrEmpty(searchText))
-            {
-                lbxListOfComputer.ItemsSource = null;
-                lbxListOfComputer.ItemsSource = allComputer_lab;
-            }
-            else
-            {
-                filteredComputer_lab.Clear();
+            //if (string.IsNullOrEmpty(searchText))
+            //{
+            //    lbxListOfComputer.ItemsSource = null;
+            //    lbxListOfComputer.ItemsSource = allComputer_lab;
+            //}
+            //else
+            //{
+            //    filteredComputer_lab.Clear();
 
-                foreach (Computer_Labs lab in allComputer_lab)
-                {
-                    if (lab.LabNumber.ToLower().Contains(searchText.ToLower()))
-                    {
-                        filteredComputer_lab.Add(lab);
-                    }
+            //    foreach (Computer_Lab lab in allComputer_lab)
+            //    {
+            //        if (lab.LabNumber.ToLower().Contains(searchText.ToLower()))
+            //        {
+            //            filteredComputer_lab.Add(lab);
+            //        }
 
-                    lbxListOfComputer.ItemsSource = null;
-                    lbxListOfComputer.ItemsSource = filteredComputer_lab;
-                }
-            }
+            //        lbxListOfComputer.ItemsSource = null;
+            //        lbxListOfComputer.ItemsSource = filteredComputer_lab;
+            //    }
+            //}
         }
 
         //Buttons in Search Software
@@ -121,34 +121,34 @@ namespace GameLab_Hub
         private void tblmExams_Labs_Loaded(object sender, RoutedEventArgs e)
         {
 
-            Exams_Labs lab1 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
-            Exams_Labs lab2 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
-            Exams_Labs lab3 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
-            Exams_Labs lab4 = new Exams_Labs("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+           //Exam_Lab lab1 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+           //Exam_Lab lab2 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+           //Exam_Lab lab3 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
+           //Exam_Lab lab4 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
 
-            allExam_lab.Add(lab1);
-            allExam_lab.Add(lab2);
-            allExam_lab.Add(lab3);
-            allExam_lab.Add(lab4);
+           // allExam_lab.Add(lab1);
+           // allExam_lab.Add(lab2);
+           // allExam_lab.Add(lab3);
+           // allExam_lab.Add(lab4);
 
 
-            lbxComputerExam.ItemsSource = allExam_lab;
+           // lbxComputerExam.ItemsSource = allExam_lab;
         }
 
         private void lbxComputerExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Exams_Labs selectedExam = lbxComputerExam.SelectedItem as Exams_Labs;
+           //Exam_Lab selectedExam = lbxComputerExam.SelectedItem asExam_Lab;
 
-            if (selectedExam != null)
-            {
+           // if (selectedExam != null)
+           // {
 
-                tblExaminfo.Text = $"Room Name: {selectedExam.LabNumber}\n" +
-                    $"Number of Computers: {selectedExam.NumberOfComputers}\n" +
-                    $"Software Installed: {selectedExam.SotferwareInstalled}\n" +
-                    $"Is Available: {(selectedExam.IsAvailable ? "Yes" : "No")}\n" +
-                    $"{selectedExam.TypeOfExam}";
+           //     tblExaminfo.Text = $"Room Name: {selectedExam.LabNumber}\n" +
+           //         $"Number of Computers: {selectedExam.NumberOfComputers}\n" +
+           //         $"Software Installed: {selectedExam.SotferwareInstalled}\n" +
+           //         $"Is Available: {(selectedExam.IsAvailable ? "Yes" : "No")}\n" +
+           //         $"{selectedExam.TypeOfExam}";
 
-            }
+           // }
         }
     }
 }
