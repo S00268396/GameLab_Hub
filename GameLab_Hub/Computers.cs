@@ -23,7 +23,7 @@ namespace GameLab_Hub
         public virtual List<Computer> Computers { get; set; }      
         public int ComputerID { get; set; }
         public virtual Exam_Lab ExamLab { get; set; }
-    }
+    } 
 
     public class Exam_Lab
     {
