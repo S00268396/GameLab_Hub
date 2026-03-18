@@ -12,9 +12,9 @@ namespace DataManagementCom
             using (db)
             {            
                 //Computers: 21 to 29  is in the start of the ComputerID 
-                Computer c1 = new Computer { ComputerID = 211, SotferwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio"};
-                Computer c2 = new Computer { ComputerID = 212, SotferwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c3 = new Computer { ComputerID = 213, SotferwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c1 = new Computer { ComputerID = 211, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio"};
+                Computer c2 = new Computer { ComputerID = 212, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c3 = new Computer { ComputerID = 213, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
                 //Computer c4 = new Computer { ComputerID = 214, SotferwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
                 //Computer c5 = new Computer { ComputerID = 215, SotferwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
                 //Computer c6 = new Computer { ComputerID = 216, SotferwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
@@ -216,9 +216,9 @@ namespace DataManagementCom
 
 
                 //Add the Labs into the Exam_labs
-                el1.ComputerLab = cl1;
-                el1.ComputerLab = cl2;
-                el1.ComputerLab = cl3;
+                el1.ComputerLabs.Add(cl1);
+                el1.ComputerLabs.Add(cl2);
+                el1.ComputerLabs.Add(cl3);
                 //el2.ComputerLab = cl4;
                 //el2.ComputerLab = cl5;
                 //el2.ComputerLab = cl6;
