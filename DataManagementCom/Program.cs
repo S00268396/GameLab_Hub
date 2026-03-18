@@ -148,7 +148,7 @@ namespace DataManagementCom
                 //cl2.Computers.Add(c5);
                 //cl2.Computers.Add(c6);
                 //cl3.Computers.Add(c7);
-                //cl3.Computers.Add(c8);
+                //cl3.Computers.Add(c8); 
                 //cl3.Computers.Add(c9);
                 //cl4.Computers.Add(c10);
                 //cl4.Computers.Add(c11);
