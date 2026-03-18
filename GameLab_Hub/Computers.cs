@@ -40,7 +40,6 @@ namespace GameLab_Hub
         public string TypeOfExam { get; set; }
         public DateTime DateOfExam { get; set; }
         public string TeacherName { get; set; }
-        public string Location { get; set; }
         public int Computer_LabID { get; set; }
         public virtual Computer_Lab ComputerLab { get; set; }
 
