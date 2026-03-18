@@ -14,6 +14,8 @@ namespace GameLab_Hub
         public virtual Computer_Lab ComputerLab { get; set; }
     }
 
+
+    //old one - using this one for now March 18
     public class Computer_Lab
     {
         public int Computer_LabID { get; set; }
@@ -21,8 +23,16 @@ namespace GameLab_Hub
         public bool IsAvailable { get; set; }
 
         public virtual List<Computer> Computers { get; set; }      
-        public int ComputerID { get; set; }
+        //public int ComputerID { get; set; }
+        
+        
+        public int Exam_LabID { get; set; }
         public virtual Exam_Lab ExamLab { get; set; }
+
+        public Computer_Lab()
+        {
+            Computers = new List<Computer>();
+        }
     } 
 
     public class Exam_Lab
