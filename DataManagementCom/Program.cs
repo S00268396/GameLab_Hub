@@ -140,6 +140,12 @@ namespace DataManagementCom
                 Exam_Lab el9 = new Exam_Lab { Exam_LabID = 949, CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",           DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon" };
 
                 //Add the Computers into the Labs
+                Console.WriteLine(" ---------------------------------------------");
+                Console.WriteLine("|     Data Management of the GameLab Hub      |");
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("| Adding the Computers into the Computer Labs |");
+                Console.WriteLine("|---------------------------------------------|");                              
                 cl1.Computers.Add(c1);
                 cl1.Computers.Add(c2);   
                 cl1.Computers.Add(c3);
@@ -215,6 +221,9 @@ namespace DataManagementCom
 
 
                 //Add the Labs into the Exam_labs
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("| Adding the Computer Labs into the Exam Labs |");
+                Console.WriteLine("|---------------------------------------------|");
                 el1.ComputerLabs.Add(cl1);
                 el1.ComputerLabs.Add(cl2);
                 el1.ComputerLabs.Add(cl3);
@@ -241,6 +250,9 @@ namespace DataManagementCom
                 el8.ComputerLabs.Add(cl24);
 
                 //Add the Labs
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("| Adding the Computer Labs into the Database  |");
+                Console.WriteLine("|---------------------------------------------|");
                 db.Computer_Labs.Add(cl1);
                 db.Computer_Labs.Add(cl2);
                 db.Computer_Labs.Add(cl3);
@@ -252,6 +264,9 @@ namespace DataManagementCom
                 db.Computer_Labs.Add(cl9);
 
                 //Add the Exam_Labs
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("|  Adding the Exam Labs into the Database     |");
+                Console.WriteLine("|---------------------------------------------|");
                 db.Exam_Labs.Add(el1);
                 db.Exam_Labs.Add(el2);
                 db.Exam_Labs.Add(el3);
@@ -262,6 +277,9 @@ namespace DataManagementCom
                 db.Exam_Labs.Add(el8);
                 db.Exam_Labs.Add(el9);
 
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("|  Saving the new Datas into the Database     |");
+                Console.WriteLine(" ---------------------------------------------");
                 db.SaveChanges();
             }
 

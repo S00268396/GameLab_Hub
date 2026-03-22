@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Linq;
 
 namespace GameLab_Hub
 {
@@ -21,8 +12,11 @@ namespace GameLab_Hub
     public partial class MainWindow : Window
     {
         //Lists for Search Software Tab
-        List<Computer_Lab> allComputer_lab = new List<Computer_Lab>();
-        List<Computer_Lab> filteredComputer_lab = new List<Computer_Lab>();
+        //List<Computer_Lab> allComputer_lab = new List<Computer_Lab>();
+        //List<Computer_Lab> filteredComputer_lab = new List<Computer_Lab>();
+
+        //The Com
+        ComputerData CD = new ComputerData();
 
         //Lists for Exam Labs Tab
         List<Exam_Lab> allExam_lab = new List<Exam_Lab>();
@@ -35,22 +29,37 @@ namespace GameLab_Hub
         //Code for Search Software Tab
         private void tblmSearchSoftware_Loaded(object sender, RoutedEventArgs e)
         {
-            //Computer_Lab lab1 = new Computer_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
-            //Computer_Lab lab2 = new Computer_Lab("Lab 2", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
-            //Computer_Lab lab3 = new Computer_Lab("Lab 3", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
-            //Computer_Lab lab4 = new Computer_Lab("Lab 4", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true);
+            //This work but it show {Computer_LabID = 1} {Loction = A235}
+            //var AllComs = CD.Computer_Labs
+            //           .Select(id => new
+            //           {
+            //               id.Computer_LabID,
+            //               id.Location
+            //           })
+            //           .ToList();
 
-            //allComputer_lab.Add(lab1);
-            //allComputer_lab.Add(lab2);
-            //allComputer_lab.Add(lab3);
-            //allComputer_lab.Add(lab4);
+            //lbxListOfComputer.ItemsSource = AllComs;
 
+            //Had to use <ListBox.ItemTemplate> and <DataTemplate> to Binding Computer_LabID and Loction to the ListBox, which meaning that only  Computer_LabID and Loction
 
-            //lbxListOfComputer.ItemsSource = allComputer_lab;
+            lbxListOfComputer.ItemsSource = CD.Computer_Labs.Include("Computers").ToList();
+
         }
 
         private void lbxListOfComputer_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+            Computer_Lab RoomSelected = lbxListOfComputer.SelectedItem as Computer_Lab;
+           
+            if (RoomSelected != null )
+            {
+                tblRoominfo.Text = $"Computer LabID: {RoomSelected.Computer_LabID}\n" +
+                                   $"Location: {RoomSelected.Location}\n" +
+                                   $"Is Available: {(RoomSelected.IsAvailable ? "Yes" : "No")}\n";
+                tblCominfo.Text = $"Computer: {RoomSelected.Computers}\n" +
+                                  $"SoftwareInstalled: {RoomSelected.Computers}";
+            }
+
             //Computer_Lab selectedLab = lbxListOfComputer.SelectedItem as Computer_Lab;
 
             //if (selectedLab != null)
@@ -154,5 +163,7 @@ namespace GameLab_Hub
 
             // }
         }
+
+        
     }
 }

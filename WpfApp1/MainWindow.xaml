@@ -26,13 +26,22 @@
             </TabItem.Header>
             <Grid>
 
-                <ListBox x:Name="lbxListOfComputer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,38,521,10"/>
+                <ListBox x:Name="lbxListOfComputer" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,38,521,10" SelectionChanged="lbxListOfComputer_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <TextBlock Text="{Binding Computer_LabID}" Margin="0,0,10,0" />
+                                <TextBlock Text="{Binding Location}" Margin="0,0,10,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
                 <Label x:Name="lblComputerlab" Content="Search:" HorizontalAlignment="Left" Margin="268,14,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray"/>
                 <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="319,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="tbxSearch_KeyUp"/>
                 <Button x:Name="btnTimetable" Content="Timetable" HorizontalAlignment="Left" Margin="652,303,0,0" VerticalAlignment="Top" Background="Cyan" BorderBrush="Cyan" Foreground="DarkSlateGray" FontWeight="Bold" Click="btnTimetable_Click"/>
                 <Button x:Name="btnExamLabs" Content="Exam Labs" HorizontalAlignment="Left" Margin="457,303,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="DeepPink" Foreground="DarkSlateGray" BorderBrush="DeepPink" Click="btnExamLabs_Click"/>
-                <TextBlock x:Name="tblRoominfo" HorizontalAlignment="Left" Margin="483,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="220" Width="278" Text="RoomInfo"/>
-
+                <TextBlock x:Name="tblRoominfo" HorizontalAlignment="Left" Margin="483,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="278" Text="RoomInfo"/>
+                <TextBlock x:Name="tblCominfo" HorizontalAlignment="Left" Margin="483,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="278" Text="ComInfo"/>
             </Grid>
         </TabItem>
 
