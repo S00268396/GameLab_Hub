@@ -56,6 +56,7 @@ namespace GameLab_Hub
                 tblRoominfo.Text = $"Computer LabID: {RoomSelected.Computer_LabID}\n" +
                                    $"Location: {RoomSelected.Location}\n" +
                                    $"Is Available: {(RoomSelected.IsAvailable ? "Yes" : "No")}\n";
+
                 tblCominfo.Text = $"Computer: {RoomSelected.Computers}\n" +
                                   $"SoftwareInstalled: {RoomSelected.Computers}";
             }
@@ -108,7 +109,6 @@ namespace GameLab_Hub
         {
             tabCTRL.SelectedIndex = 1;
         }
-
         //Buttons in Timetable
         private void btnExamsLabs_Click(object sender, RoutedEventArgs e)
         {
@@ -129,10 +129,12 @@ namespace GameLab_Hub
         {
             tabCTRL.SelectedIndex = 1;
         }
-
         //Code for Exam Labs Tab
         private void tblmExams_Labs_Loaded(object sender, RoutedEventArgs e)
         {
+
+            lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();
+
 
             //Exam_Lab lab1 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
             //Exam_Lab lab2 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
@@ -150,6 +152,19 @@ namespace GameLab_Hub
 
         private void lbxComputerExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
+            Exam_Lab ExamSelected = lbxComputerExam.ItemsSource as Exam_Lab;
+
+            if (ExamSelected != null)
+            {
+                tblExaminfo.Text = $"Exam LabID: {ExamSelected.Exam_LabID}\n" +
+                                   $"Course Name: {ExamSelected.CourseName}\n" +
+                                   $"Type Of Exam: {ExamSelected.TypeOfExam}\n" +
+                                   $"Date Of Exam: {ExamSelected.DateOfExam}\n" +
+                                   $"Teacher Name: {ExamSelected.TeacherName}\n";
+
+               
+            }
             //Exam_Lab selectedExam = lbxComputerExam.SelectedItem asExam_Lab;
 
             // if (selectedExam != null)
@@ -164,6 +179,6 @@ namespace GameLab_Hub
             // }
         }
 
-        
+
     }
 }
