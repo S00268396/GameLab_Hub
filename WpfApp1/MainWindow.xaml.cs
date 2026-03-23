@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Linq;
+using System.Windows.Media;
 
 namespace GameLab_Hub
 {
@@ -153,7 +154,7 @@ namespace GameLab_Hub
         private void lbxComputerExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-            Exam_Lab ExamSelected = lbxComputerExam.ItemsSource as Exam_Lab;
+            Exam_Lab ExamSelected = lbxComputerExam.SelectedItem as Exam_Lab;
 
             if (ExamSelected != null)
             {
@@ -163,22 +164,12 @@ namespace GameLab_Hub
                                    $"Date Of Exam: {ExamSelected.DateOfExam}\n" +
                                    $"Teacher Name: {ExamSelected.TeacherName}\n";
 
-               
+                //tblLabinfo.Text = $""
             }
-            //Exam_Lab selectedExam = lbxComputerExam.SelectedItem asExam_Lab;
 
-            // if (selectedExam != null)
-            // {
-
-            //     tblExaminfo.Text = $"Room Name: {selectedExam.LabNumber}\n" +
-            //         $"Number of Computers: {selectedExam.NumberOfComputers}\n" +
-            //         $"Software Installed: {selectedExam.SotferwareInstalled}\n" +
-            //         $"Is Available: {(selectedExam.IsAvailable ? "Yes" : "No")}\n" +
-            //         $"{selectedExam.TypeOfExam}";
-
-            // }
+           
         }
 
-
+        
     }
 }
