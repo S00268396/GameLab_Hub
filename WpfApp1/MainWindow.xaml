@@ -42,7 +42,7 @@
                 <Button x:Name="btnTimetable" Content="Timetable" HorizontalAlignment="Left" Margin="652,303,0,0" VerticalAlignment="Top" Background="Cyan" BorderBrush="Cyan" Foreground="DarkSlateGray" FontWeight="Bold" Click="btnTimetable_Click"/>
                 <Button x:Name="btnExamLabs" Content="Exam Labs" HorizontalAlignment="Left" Margin="457,303,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="DeepPink" Foreground="DarkSlateGray" BorderBrush="DeepPink" Click="btnExamLabs_Click"/>
                 <TextBlock x:Name="tblRoominfo" HorizontalAlignment="Left" Margin="483,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="67" Width="278" Text="RoomInfo"/>
-                <TextBlock x:Name="tblCominfo" HorizontalAlignment="Left" Margin="483,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="45" Width="278" Text="ComInfo"/>
+                <TextBox x:Name="tbxCominfo" HorizontalAlignment="Left" Margin="483,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="170" Width="278" Text="ComInfo"/>
             </Grid>
         </TabItem>
 

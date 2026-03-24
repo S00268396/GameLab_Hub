@@ -12,9 +12,7 @@ namespace GameLab_Hub
     /// </summary>
     public partial class MainWindow : Window
     {
-        //Lists for Search Software Tab
-        //List<Computer_Lab> allComputer_lab = new List<Computer_Lab>();
-        //List<Computer_Lab> filteredComputer_lab = new List<Computer_Lab>();
+       
 
         //The Com
         ComputerData CD = new ComputerData();
@@ -58,47 +56,33 @@ namespace GameLab_Hub
                                    $"Location: {RoomSelected.Location}\n" +
                                    $"Is Available: {(RoomSelected.IsAvailable ? "Yes" : "No")}\n";
 
-                tblCominfo.Text = $"Computer: {RoomSelected.Computers}\n" +
-                                  $"SoftwareInstalled: {RoomSelected.Computers}";
+                //This work but it don't show the computers. Maybe use the join things
+                
+                //tblCominfo.Text = $"Computer: {RoomSelected.Computers}\n" +
+                //                  $"SoftwareInstalled: {RoomSelected.Computers}";
+
+                // After look up the string Join -so it takes the datas and join in into one string(Maybe it will work)
+                //It does work but it only show one computer, Maybe use a tblm and not tbl - I was right
+
+                tbxCominfo.Text = string.Join("\n\n",RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
             }
 
-            //Computer_Lab selectedLab = lbxListOfComputer.SelectedItem as Computer_Lab;
-
-            //if (selectedLab != null)
-            //{
-
-            //    tblRoominfo.Text = $"Room Name: {selectedLab.LabNumber}\n" +
-            //        $"Number of Computers: {selectedLab.NumberOfComputers}\n" +
-            //        $"Software Installed: {selectedLab.SotferwareInstalled}\n" +
-            //        $"Is Available: {(selectedLab.IsAvailable ? "Yes" : "No")}"; 
-
-            //}
+           
         }
 
         private void tbxSearch_KeyUp(object sender, KeyEventArgs e)
         {
-            //string searchText = tbxSearch.Text;
 
-            //if (string.IsNullOrEmpty(searchText))
-            //{
-            //    lbxListOfComputer.ItemsSource = null;
-            //    lbxListOfComputer.ItemsSource = allComputer_lab;
-            //}
-            //else
-            //{
-            //    filteredComputer_lab.Clear();
+            //This working
+            string searchText = tbxSearch.Text;
 
-            //    foreach (Computer_Lab lab in allComputer_lab)
-            //    {
-            //        if (lab.LabNumber.ToLower().Contains(searchText.ToLower()))
-            //        {
-            //            filteredComputer_lab.Add(lab);
-            //        }
+            var FilteredComputer_Lab = CD.Computer_Labs
+                         .Where(s => s.Computer_LabID.ToString().Contains(searchText) ||
+                                 s.Location.ToString().Contains(searchText))
+                         .ToList();
 
-            //        lbxListOfComputer.ItemsSource = null;
-            //        lbxListOfComputer.ItemsSource = filteredComputer_lab;
-            //    }
-            //}
+            lbxListOfComputer.ItemsSource = null;
+            lbxListOfComputer.ItemsSource = FilteredComputer_Lab;            
         }
 
         //Buttons in Search Software
@@ -134,21 +118,7 @@ namespace GameLab_Hub
         private void tblmExams_Labs_Loaded(object sender, RoutedEventArgs e)
         {
 
-            lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();
-
-
-            //Exam_Lab lab1 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
-            //Exam_Lab lab2 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
-            //Exam_Lab lab3 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
-            //Exam_Lab lab4 = new Exam_Lab("Lab 1", "Bulding3", 20, "Adobe Photoshop, Microsoft Office", true, "Fuck");
-
-            // allExam_lab.Add(lab1);
-            // allExam_lab.Add(lab2);
-            // allExam_lab.Add(lab3);
-            // allExam_lab.Add(lab4);
-
-
-            // lbxComputerExam.ItemsSource = allExam_lab;
+            lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();            
         }
 
         private void lbxComputerExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
