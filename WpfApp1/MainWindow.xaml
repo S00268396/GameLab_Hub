@@ -10,7 +10,7 @@
     <!--<Window.Background>
         <ImageBrush ImageSource="/BackgroundImage/ComputerImageTab.avif"/>
     </Window.Background>-->
-    <TabControl TabStripPlacement = "Top" Name="tabCTRL">       
+    <TabControl TabStripPlacement = "Top" Name="tabCTRL">
         <TabItem x:Name="tblmSearchSoftware" Loaded="tblmSearchSoftware_Loaded">
             <TabItem.Header>
                 <StackPanel Orientation="Horizontal">
@@ -41,8 +41,8 @@
                 <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Margin="319,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" KeyUp="tbxSearch_KeyUp"/>
                 <Button x:Name="btnTimetable" Content="Timetable" HorizontalAlignment="Left" Margin="652,303,0,0" VerticalAlignment="Top" Background="Cyan" BorderBrush="Cyan" Foreground="DarkSlateGray" FontWeight="Bold" Click="btnTimetable_Click"/>
                 <Button x:Name="btnExamLabs" Content="Exam Labs" HorizontalAlignment="Left" Margin="457,303,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="DeepPink" Foreground="DarkSlateGray" BorderBrush="DeepPink" Click="btnExamLabs_Click"/>
-                <TextBlock x:Name="tblRoominfo" HorizontalAlignment="Left" Margin="483,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="67" Width="278" Text="RoomInfo"/>
-                <TextBox x:Name="tbxCominfo" HorizontalAlignment="Left" Margin="483,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="170" Width="278" Text="ComInfo"/>
+                <TextBlock x:Name="tblRoominfo" HorizontalAlignment="Left" Margin="483,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="117" Width="278" Text="RoomInfo"/>
+                <TextBox x:Name="tbxCominfo" HorizontalAlignment="Left" Margin="483,168,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="130" Width="278" Text="ComInfo"/>
             </Grid>
         </TabItem>
 
@@ -90,22 +90,21 @@
                     <ColumnDefinition Width="303*"/>
                 </Grid.ColumnDefinitions>
                 <ListBox x:Name="lbxComputerExam" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,38,218,10" Grid.ColumnSpan="2" SelectionChanged="lbxComputerExam_SelectionChanged">
-                   <ListBox.ItemTemplate>
-                      <DataTemplate>
-                         <StackPanel Orientation="Horizontal" Margin="2">
-                           <TextBlock Text="{Binding Exam_LabID}" Margin="0,0,10,0" />
-                           <TextBlock Text="{Binding CourseName}" Margin="0,0,10,0"/>
-                         </StackPanel>
-                       </DataTemplate>
-                     </ListBox.ItemTemplate>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="2">
+                                <TextBlock Text="{Binding Exam_LabID}" Margin="0,0,10,0" />
+                                <TextBlock Text="{Binding CourseName}" Margin="0,0,10,0"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
                 </ListBox>
-                <Label x:Name="lblSearchExam" Content="Search:" HorizontalAlignment="Left" Margin="245,14,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray" Grid.Column="1"/>
+                <Label x:Name="lblExamID" Content="ExamID:" HorizontalAlignment="Left" Margin="245,14,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray" Grid.Column="1"/>
                 <Button x:Name="btnTimetable1" Content="Timetable" HorizontalAlignment="Left" Margin="155,303,0,0" VerticalAlignment="Top" Grid.Column="2" Background="DarkOrange" FontWeight="Bold" BorderBrush="DarkOrange" Foreground="DarkSlateGray" Click="btnTimetable1_Click"/>
                 <Button x:Name="btnSearchSoftware" Content="Search Software" HorizontalAlignment="Left" Margin="434,303,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Background="SpringGreen" BorderBrush="SpringGreen" Foreground="DarkSlateGray" FontWeight="Bold" Grid.Column="1" Click="btnSearchSoftware_Click"/>
-                <ComboBox x:Name="cmbxSearch" Grid.Column="1" HorizontalAlignment="Left" Margin="299,14,0,0" VerticalAlignment="Top" Width="120"/>
-                <TextBlock x:Name="tblExaminfo" HorizontalAlignment="Left" Margin="460,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="278" Text="ExamInfo" Grid.Column="1" Grid.ColumnSpan="2"/>
-                <TextBlock x:Name="tblLabinfo" HorizontalAlignment="Left" Margin="460,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="54" Width="278" Text="LabInfo" Grid.Column="1" Grid.ColumnSpan="2"/>
-
+                <ComboBox x:Name="cmbxSearchExamID" Grid.Column="1" HorizontalAlignment="Left" Margin="299,14,0,0" VerticalAlignment="Top" Width="120" Loaded="cmbxSearchExamID_Loaded"/>
+                <TextBlock x:Name="tblExaminfo" HorizontalAlignment="Left" Margin="460,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="278" Text="ExamInfo" Grid.Column="1" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="txbLabinfo" HorizontalAlignment="Left" Margin="460,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="278" Text="LabInfo" Grid.Column="1" Grid.ColumnSpan="2"/>
             </Grid>
         </TabItem>
 

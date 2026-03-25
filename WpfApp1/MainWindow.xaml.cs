@@ -40,7 +40,7 @@ namespace GameLab_Hub
             //lbxListOfComputer.ItemsSource = AllComs;
 
             //Had to use <ListBox.ItemTemplate> and <DataTemplate> to Binding Computer_LabID and Loction to the ListBox, which meaning that only  Computer_LabID and Loction
-
+            //I learn how to use this menth from a website - https://stackoverflow.com/questions/2456643/wpf-very-basic-listbox-itemtemplate-question
             lbxListOfComputer.ItemsSource = CD.Computer_Labs.Include("Computers").ToList();
 
         }
@@ -57,13 +57,13 @@ namespace GameLab_Hub
                                    $"Is Available: {(RoomSelected.IsAvailable ? "Yes" : "No")}\n";
 
                 //This work but it don't show the computers. Maybe use the join things
-                
+
                 //tblCominfo.Text = $"Computer: {RoomSelected.Computers}\n" +
                 //                  $"SoftwareInstalled: {RoomSelected.Computers}";
 
                 // After look up the string Join -so it takes the datas and join in into one string(Maybe it will work)
-                //It does work but it only show one computer, Maybe use a tblm and not tbl - I was right
-
+                //It does work but it only show one computer, Maybe use a TextBox and not TextBlock - I was right
+                //https://stackoverflow.com/questions/9310607/string-join-in-linq-to-entity-queries
                 tbxCominfo.Text = string.Join("\n\n",RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
             }
 
@@ -118,7 +118,7 @@ namespace GameLab_Hub
         private void tblmExams_Labs_Loaded(object sender, RoutedEventArgs e)
         {
 
-            lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();            
+            lbxComputerExam.ItemsSource = CD.Exam_Labs.Include("ComputerLabs").ToList();            
         }
 
         private void lbxComputerExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -134,12 +134,18 @@ namespace GameLab_Hub
                                    $"Date Of Exam: {ExamSelected.DateOfExam}\n" +
                                    $"Teacher Name: {ExamSelected.TeacherName}\n";
 
-                //tblLabinfo.Text = $""
+                txbLabinfo.Text = string.Join("\n\n", ExamSelected.ComputerLabs.Select(cl => $"Computer LabID: {cl.Computer_LabID}\n Location: {cl.Location}"));
+
+                //tbxCominfo.Text = string.Join("\n\n", RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
+
             }
 
-           
+
         }
 
-        
+        private void cmbxSearchExamID_Loaded(object sender, RoutedEventArgs e)
+        {
+            //CmbxSearch = CD.C
+        }
     }
 }
