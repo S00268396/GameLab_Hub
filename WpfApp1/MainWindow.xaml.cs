@@ -135,9 +135,6 @@ namespace GameLab_Hub
                                    $"Teacher Name: {ExamSelected.TeacherName}\n";
 
                 txbLabinfo.Text = string.Join("\n\n", ExamSelected.ComputerLabs.Select(cl => $"Computer LabID: {cl.Computer_LabID}\n Location: {cl.Location}"));
-
-                //tbxCominfo.Text = string.Join("\n\n", RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
-
             }
 
 
@@ -145,7 +142,23 @@ namespace GameLab_Hub
 
         private void cmbxSearchExamID_Loaded(object sender, RoutedEventArgs e)
         {
-            //CmbxSearch = CD.C
+            var exams = CD.Exam_Labs.ToList();
+
+            cmbxSearchExamID.ItemsSource = exams;
+
+            cmbxSearchExamID.DisplayMemberPath = "CourseName";
+
+            cmbxSearchExamID.SelectedValuePath = "Exam_LabID";
+        }
+
+        private void cmbxSearchExamID_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Exam_Lab cmbxSearc = cmbxSearchExamID.SelectedItem as Exam_Lab;
+
+            if (cmbxSearc != null)
+            {
+                cmbxSearc = 
+            }
         }
     }
 }
