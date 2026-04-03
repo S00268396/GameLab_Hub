@@ -139,6 +139,14 @@ namespace DataManagementCom
                 Exam_Lab el8 = new Exam_Lab { Exam_LabID = 948, CourseName = "Games Development L8 - Y3", TypeOfExam = "Software Quality and Testing",      YearGroup = "Year 3 Group C",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
                 Exam_Lab el9 = new Exam_Lab { Exam_LabID = 949, CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",               YearGroup = "Year 4 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon" };
 
+                //TimeSlots
+                TimeSlot e1 = new TimeSlot { Day = DayOfWeek.Monday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(11, 0, 0) };
+                TimeSlot e2 = new TimeSlot { Day = DayOfWeek.Tuesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
+
+                //Details
+                Details d1 = new Details {};
+                Details d2 = new Details {};
+
                 //Add the Computers into the Labs
                 Console.WriteLine(" ---------------------------------------------");
                 Console.WriteLine("|     Data Management of the GameLab Hub      |");
@@ -276,6 +284,11 @@ namespace DataManagementCom
                 db.Exam_Labs.Add(el7);
                 db.Exam_Labs.Add(el8);
                 db.Exam_Labs.Add(el9);
+
+                db.TimeSlots.Add(e1);   
+                db.TimeSlots.Add(e2);
+                db.Details.Add(d1);
+                db.Details.Add(d2);
 
                 Console.WriteLine("|---------------------------------------------|");
                 Console.WriteLine("|  Saving the new Datas into the Database     |");

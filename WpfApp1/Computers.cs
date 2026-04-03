@@ -47,10 +47,12 @@ namespace GameLab_Hub
         public string Location { get; set; }
 
         public virtual List<Computer_Lab> ComputerLabs { get; set; }
+        public virtual List<Details> TimeSlots { get; set; }  //added navigation property for one-to-many relationship
 
         public Exam_Lab()
         {
             ComputerLabs = new List<Computer_Lab>();  //initialize the list to avoid null reference issues
+            TimeSlots = new List<Details>();  //initialize the list to avoid null reference issues
         }
 
     }
@@ -62,7 +64,9 @@ namespace GameLab_Hub
         public DbSet<Computer> Computers { get; set; }
         public DbSet<Computer_Lab> Computer_Labs { get; set; }
         public DbSet<Exam_Lab> Exam_Labs { get; set; }
-        
+        public DbSet<TimeSlot> TimeSlots { get; set; }
+        public DbSet<Details> Details { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             // Explicit FK for Computer -> Computer_Lab
@@ -83,6 +87,17 @@ namespace GameLab_Hub
                     m.MapRightKey("Computer_LabID");
                 });
 
+            //Timetable
+            //TimeSlot to details is one -to-many so the same as Computer to Computer_Lab
+            modelBuilder.Entity<Details>()
+                .HasRequired(d => d.ExamLab)
+                .WithMany(e => e.TimeSlots)
+                .HasForeignKey(d => d.Exam_LabID);
+
+            modelBuilder.Entity<Details>()
+              .HasRequired(d => d.TimeSlot)
+              .WithMany(t => t.Details)
+              .HasForeignKey(d => d.TimeSlotID);
 
         }
     }
