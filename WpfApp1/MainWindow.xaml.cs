@@ -12,7 +12,7 @@ namespace GameLab_Hub
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+
 
         //The Com
         ComputerData CD = new ComputerData();
@@ -49,8 +49,8 @@ namespace GameLab_Hub
         {
 
             Computer_Lab RoomSelected = lbxListOfComputer.SelectedItem as Computer_Lab;
-           
-            if (RoomSelected != null )
+
+            if (RoomSelected != null)
             {
                 tblRoominfo.Text = $"Computer LabID: {RoomSelected.Computer_LabID}\n" +
                                    $"Location: {RoomSelected.Location}\n" +
@@ -64,10 +64,10 @@ namespace GameLab_Hub
                 // After look up the string Join -so it takes the datas and join in into one string(Maybe it will work)
                 //It does work but it only show one computer, Maybe use a TextBox and not TextBlock - I was right
                 //https://stackoverflow.com/questions/9310607/string-join-in-linq-to-entity-queries
-                tbxCominfo.Text = string.Join("\n\n",RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
+                tbxCominfo.Text = string.Join("\n\n", RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
             }
 
-           
+
         }
 
         private void tbxSearch_KeyUp(object sender, KeyEventArgs e)
@@ -82,7 +82,7 @@ namespace GameLab_Hub
                          .ToList();
 
             lbxListOfComputer.ItemsSource = null;
-            lbxListOfComputer.ItemsSource = FilteredComputer_Lab;            
+            lbxListOfComputer.ItemsSource = FilteredComputer_Lab;
         }
 
         //Buttons in Search Software
@@ -118,7 +118,7 @@ namespace GameLab_Hub
         private void tblmExams_Labs_Loaded(object sender, RoutedEventArgs e)
         {
 
-            lbxComputerExam.ItemsSource = CD.Exam_Labs.Include("ComputerLabs").ToList();            
+            lbxComputerExam.ItemsSource = CD.Exam_Labs.Include("ComputerLabs").ToList();
         }
 
         private void lbxComputerExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -130,6 +130,7 @@ namespace GameLab_Hub
             {
                 tblExaminfo.Text = $"Exam LabID: {ExamSelected.Exam_LabID}\n" +
                                    $"Course Name: {ExamSelected.CourseName}\n" +
+                                   $"Year Group: {ExamSelected.YearGroup}\n" +
                                    $"Type Of Exam: {ExamSelected.TypeOfExam}\n" +
                                    $"Date Of Exam: {ExamSelected.DateOfExam}\n" +
                                    $"Teacher Name: {ExamSelected.TeacherName}\n";
@@ -140,25 +141,83 @@ namespace GameLab_Hub
 
         }
 
-        private void cmbxSearchExamID_Loaded(object sender, RoutedEventArgs e)
+        private void cmbxSearchCourse_Loaded(object sender, RoutedEventArgs e)
         {
-            var exams = CD.Exam_Labs.ToList();
+            var Course = CD.Exam_Labs.ToList();
 
-            cmbxSearchExamID.ItemsSource = exams;
+            Course.Insert(0, new Exam_Lab { CourseName = "All Courses" });  
 
-            cmbxSearchExamID.DisplayMemberPath = "CourseName";
+            cmbxSearchCourse.ItemsSource = Course;
 
-            cmbxSearchExamID.SelectedValuePath = "Exam_LabID";
+            cmbxSearchCourse.DisplayMemberPath = "CourseName";
+
+            cmbxSearchCourse.SelectedValuePath = "Exam_LabID";
         }
 
-        private void cmbxSearchExamID_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void cmbxSearchCourse_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Exam_Lab cmbxSearc = cmbxSearchExamID.SelectedItem as Exam_Lab;
-
-            if (cmbxSearc != null)
+            if (cmbxSearchCourse.SelectedItem is Exam_Lab selectedCourse)
             {
-                cmbxSearc = 
+                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedCourse };
             }
         }
-    }
+
+        private void cmbxSearchTeacher_Loaded(object sender, RoutedEventArgs e)
+        {
+            var Teachers = CD.Exam_Labs.ToList();
+
+            cmbxSearchTeacher.ItemsSource = Teachers;
+
+            cmbxSearchTeacher.DisplayMemberPath = "TeacherName";
+        }
+
+        private void cmbxSearchTeacher_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            if (cmbxSearchTeacher.SelectedItem is Exam_Lab selectedTeacher)
+            {
+                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedTeacher };
+            }
+        }
+
+        private void cmbxSearchYear_Loaded(object sender, RoutedEventArgs e)
+        {
+            var Years = CD.Exam_Labs.ToList();
+            cmbxSearchYear.ItemsSource = Years;
+            cmbxSearchYear.DisplayMemberPath = "YearGroup";
+        }
+
+        private void cmbxSearchYear_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cmbxSearchYear.SelectedItem is Exam_Lab selectedYear)
+            {
+                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedYear };
+
+            }
+        }
+
+        private void cmbxSearchExam_Loaded(object sender, RoutedEventArgs e)
+        {
+            var Exams = CD.Exam_Labs.ToList();
+            cmbxSearchExam.ItemsSource = Exams;
+            cmbxSearchExam.DisplayMemberPath = "TypeOfExam";
+        }
+
+        private void cmbxSearchExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //if (cmbxSearchExam.SelectedItem == null)
+            //{
+            //    lbxComputerExam.ItemsSource = null;
+            //    return;
+            //}
+
+            if (cmbxSearchExam.SelectedItem is Exam_Lab selectedExam)
+            {
+                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedExam };
+
+            }
+          
+        }
+    } 
+
 }

@@ -129,15 +129,15 @@ namespace DataManagementCom
 
 
                 //Exam: 94 is in the start of the Computer_LabID 
-                Exam_Lab el1 = new Exam_Lab { Exam_LabID = 941, CourseName = "Games Development L7 - Y2", TypeOfExam = "3D Game Programming",           DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon"};
-                Exam_Lab el2 = new Exam_Lab { Exam_LabID = 942, CourseName = "Games Development L7 - Y3", TypeOfExam = "Math 3",                        DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Kieran Hughes" };
-                Exam_Lab el3 = new Exam_Lab { Exam_LabID = 943, CourseName = "Games Development L7 - Y1", TypeOfExam = "Object Oriented Development",   DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Keith McManus" };
-                Exam_Lab el4 = new Exam_Lab { Exam_LabID = 944, CourseName = "Games Development L6 - Y2", TypeOfExam = "Software Quality and Testing",  DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
-                Exam_Lab el5 = new Exam_Lab { Exam_LabID = 945, CourseName = "Games Development L6 - Y1", TypeOfExam = "Math 1",                        DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Kieran Hughes" };
-                Exam_Lab el6 = new Exam_Lab { Exam_LabID = 946, CourseName = "Games Development L8 - Y1", TypeOfExam = "Software Quality and Testing ", DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
-                Exam_Lab el7 = new Exam_Lab { Exam_LabID = 947, CourseName = "Games Development L8 - Y2", TypeOfExam = "Object Oriented Development",   DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Keith McManus" };
-                Exam_Lab el8 = new Exam_Lab { Exam_LabID = 948, CourseName = "Games Development L8 - Y3", TypeOfExam = "Software Quality and Testing",  DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
-                Exam_Lab el9 = new Exam_Lab { Exam_LabID = 949, CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",           DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon" };
+                Exam_Lab el1 = new Exam_Lab { Exam_LabID = 941, CourseName = "Games Development L7 - Y2", TypeOfExam = "3D Game Programming",               YearGroup = "Year 2 Group B",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon"};
+                Exam_Lab el2 = new Exam_Lab { Exam_LabID = 942, CourseName = "Games Development L7 - Y3", TypeOfExam = "Math 3",                            YearGroup = "Year 3 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Kieran Hughes" };
+                Exam_Lab el3 = new Exam_Lab { Exam_LabID = 943, CourseName = "Games Development L7 - Y1", TypeOfExam = "Object Oriented Development",       YearGroup = "Year 1 Group C",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Keith McManus" };
+                Exam_Lab el4 = new Exam_Lab { Exam_LabID = 944, CourseName = "Games Development L6 - Y2", TypeOfExam = "Software Quality and Testing",      YearGroup = "Year 2 Group D",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
+                Exam_Lab el5 = new Exam_Lab { Exam_LabID = 945, CourseName = "Games Development L6 - Y1", TypeOfExam = "Math 1",                            YearGroup = "Year 1 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Kieran Hughes" };
+                Exam_Lab el6 = new Exam_Lab { Exam_LabID = 946, CourseName = "Games Development L8 - Y1", TypeOfExam = "Software Quality and Testing ",     YearGroup = "Year 1 Group B",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
+                Exam_Lab el7 = new Exam_Lab { Exam_LabID = 947, CourseName = "Games Development L8 - Y2", TypeOfExam = "Object Oriented Development",       YearGroup = "Year 2 Group C",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Keith McManus" };
+                Exam_Lab el8 = new Exam_Lab { Exam_LabID = 948, CourseName = "Games Development L8 - Y3", TypeOfExam = "Software Quality and Testing",      YearGroup = "Year 3 Group C",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
+                Exam_Lab el9 = new Exam_Lab { Exam_LabID = 949, CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",               YearGroup = "Year 4 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon" };
 
                 //Add the Computers into the Labs
                 Console.WriteLine(" ---------------------------------------------");

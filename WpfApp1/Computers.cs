@@ -40,6 +40,7 @@ namespace GameLab_Hub
     {
         public int Exam_LabID { get; set; }
         public string CourseName { get; set; }
+        public string YearGroup { get; set; }
         public string TypeOfExam { get; set; }
         public DateTime DateOfExam { get; set; }
         public string TeacherName { get; set; }
