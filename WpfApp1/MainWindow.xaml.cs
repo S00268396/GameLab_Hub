@@ -105,6 +105,21 @@ namespace GameLab_Hub
             tabCTRL.SelectedIndex = 0;
         }
 
+        //Code for Timetable Tab
+        //This create the timeable maybe use the DataGrid with the DataGridTextColumn and Binding to show the data in the DataGrid
+        private void dgTimetable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var groups = CD.Details
+                .Include(d => d.ExamLab)
+                .Include(d => d.TimeSlot)
+                .Select(d => new 
+                {
+                   Course = d.ExamLab.CourseName,
+                })
+                .ToList();
+
+
+        }
         //Buttons in Exam Labs
         private void btnSearchSoftware_Click(object sender, RoutedEventArgs e)
         {
@@ -218,6 +233,8 @@ namespace GameLab_Hub
             }
           
         }
+
+       
     } 
 
 }

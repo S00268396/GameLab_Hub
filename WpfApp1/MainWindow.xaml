@@ -62,7 +62,17 @@
                 </StackPanel>
             </TabItem.Header>
             <Grid>
-                <Calendar HorizontalAlignment="Left" Margin="266,12,0,0" VerticalAlignment="Top"/>
+                <DataGrid x:Name="dgTimetable" AutoGenerateColumns="False" Margin="10,38,10,10" IsReadOnly="True" SelectionChanged="dgTimetable_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Course Name" Binding="{Binding CourseName}" Width="*"/>
+                        <DataGridTextColumn Header="Type Of Exam" Binding="{Binding TypeOfExam}" Width="*"/>
+                        <DataGridTextColumn Header="Year" Binding="{Binding YearGroup}" Width="*"/>
+                        <DataGridTextColumn Header="Teacher" Binding="{Binding TeacherName}" Width="*"/>
+                        <DataGridTextColumn Header="ComputerLabs" Binding="{Binding ComputerLabs}" Width="*"/>
+                        <DataGridTextColumn Header="Day" Binding="{Binding Day}" Width="*"/>
+                        <DataGridTextColumn Header="Time" Binding="{Binding TimeSlot.StartTime}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
                 <Button x:Name="btnSearchSoftware1" Content="Search Software" HorizontalAlignment="Left" Margin="525,319,0,0" VerticalAlignment="Top" Background="Lime" BorderBrush="Lime" Foreground="#FF1E1E1E" FontWeight="Bold" Click="btnSearchSoftware1_Click"/>
                 <Button x:Name="btnExamsLabs" Content="Exams Labs" HorizontalAlignment="Left" Margin="686,319,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.255,0.516" Background="Cyan" BorderBrush="Cyan" Foreground="#FF1E1E1E" FontWeight="Bold" Click="btnExamsLabs_Click"/>
             </Grid>

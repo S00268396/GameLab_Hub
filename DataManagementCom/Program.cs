@@ -140,12 +140,27 @@ namespace DataManagementCom
                 Exam_Lab el9 = new Exam_Lab { Exam_LabID = 949, CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",               YearGroup = "Year 4 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon" };
 
                 //TimeSlots
-                TimeSlot e1 = new TimeSlot { Day = DayOfWeek.Monday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(11, 0, 0) };
-                TimeSlot e2 = new TimeSlot { Day = DayOfWeek.Tuesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
+                TimeSlot ts1 = new TimeSlot { Day = DayOfWeek.Monday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(11, 0, 0) };
+                TimeSlot ts2 = new TimeSlot { Day = DayOfWeek.Tuesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
+                TimeSlot ts3 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(14, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
+                TimeSlot ts4 = new TimeSlot { Day = DayOfWeek.Thursday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
+                TimeSlot ts5 = new TimeSlot { Day = DayOfWeek.Friday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(12, 0, 0) };
+                TimeSlot ts6 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(14, 0, 0) };
+                TimeSlot ts7 = new TimeSlot { Day = DayOfWeek.Thursday, StartTime = new TimeSpan(10, 0, 0), EndTime = new TimeSpan(12, 0, 0) };
+                TimeSlot ts8 = new TimeSlot { Day = DayOfWeek.Tuesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(16, 0, 0) };
+                TimeSlot ts9 = new TimeSlot { Day = DayOfWeek.Monday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(11, 0, 0) };
+
 
                 //Details
-                Details d1 = new Details {};
-                Details d2 = new Details {};
+                Details d1 = new Details { ExamLab = el1, TimeSlot = ts1};
+                Details d2 = new Details { ExamLab = el2, TimeSlot = ts2 };
+                Details d3 = new Details { ExamLab = el3, TimeSlot = ts3 };
+                Details d4 = new Details { ExamLab = el4, TimeSlot = ts4 };
+                Details d5 = new Details { ExamLab = el5, TimeSlot = ts5 };
+                Details d6 = new Details { ExamLab = el6, TimeSlot = ts6 };
+                Details d7 = new Details { ExamLab = el7, TimeSlot = ts7 };
+                Details d8 = new Details { ExamLab = el8, TimeSlot = ts8 };
+                Details d9 = new Details { ExamLab = el9, TimeSlot = ts9 };
 
                 //Add the Computers into the Labs
                 Console.WriteLine(" ---------------------------------------------");
@@ -285,11 +300,35 @@ namespace DataManagementCom
                 db.Exam_Labs.Add(el8);
                 db.Exam_Labs.Add(el9);
 
-                db.TimeSlots.Add(e1);   
-                db.TimeSlots.Add(e2);
+                //Add the TimeSlots
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("|  Adding the TimeSlots into the Database     |");
+                Console.WriteLine("|---------------------------------------------|");
+                db.TimeSlots.Add(ts1);   
+                db.TimeSlots.Add(ts2);
+                db.TimeSlots.Add(ts3);
+                db.TimeSlots.Add(ts4);
+                db.TimeSlots.Add(ts5);
+                db.TimeSlots.Add(ts6);
+                db.TimeSlots.Add(ts7);
+                db.TimeSlots.Add(ts8);
+                db.TimeSlots.Add(ts9);
+
+                //Add the Details
+                Console.WriteLine("|---------------------------------------------|");
+                Console.WriteLine("|  Adding the Details into the Database     |");
+                Console.WriteLine("|---------------------------------------------|");
                 db.Details.Add(d1);
                 db.Details.Add(d2);
+                db.Details.Add(d3);
+                db.Details.Add(d4);
+                db.Details.Add(d5);
+                db.Details.Add(d6);
+                db.Details.Add(d7);
+                db.Details.Add(d8);
+                db.Details.Add(d9);
 
+                //Save the changes into the Database
                 Console.WriteLine("|---------------------------------------------|");
                 Console.WriteLine("|  Saving the new Datas into the Database     |");
                 Console.WriteLine(" ---------------------------------------------");
