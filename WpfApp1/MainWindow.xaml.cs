@@ -104,7 +104,10 @@ namespace WpfApp1
         //This create the timeable maybe use the DataGrid with the DataGridTextColumn and Binding to show the data in the DataGrid
         private void dgTimetable_Loaded(object sender, RoutedEventArgs e)
         {
-            dgTimetable.ItemsSource = CD.TimeSlots.Include("Details").Include("ExamLabs").ToList();
+            //Maybe I need to add a relationship in this part - so the relationship is that TimeSlot have many Details and each Details have one Exam_Lab.
+            dgTimetable.ItemsSource = CD.TimeSlots.Include("Details.ExamLab.ComputerLabs")
+                                                   .ToList()
+                                                   .SelectMany(t => t.Details.Select(d => new { ??}));
         }
         //Buttons in Exam Labs
         private void btnSearchSoftware_Click(object sender, RoutedEventArgs e)
