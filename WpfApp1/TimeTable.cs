@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameLab_Hub
+namespace WpfApp1
 {
     public class TimeSlot
     {

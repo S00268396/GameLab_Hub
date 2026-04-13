@@ -5,7 +5,7 @@ using System.Windows.Input;
 using System.Linq;
 using System.Windows.Media;
 
-namespace GameLab_Hub
+namespace WpfApp1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -109,14 +109,14 @@ namespace GameLab_Hub
         //This create the timeable maybe use the DataGrid with the DataGridTextColumn and Binding to show the data in the DataGrid
         private void dgTimetable_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var groups = CD.Details
-                .Include(d => d.ExamLab)
-                .Include(d => d.TimeSlot)
-                .Select(d => new 
-                {
-                   Course = d.ExamLab.CourseName,
-                })
-                .ToList();
+            //var groups = CD.Details
+            //    .Include(d => d.ExamLab)
+            //    .Include(d => d.TimeSlot)
+            //    .Select(d => new 
+            //    {
+            //       Course = d.ExamLab.CourseName,
+            //    })
+            //    .ToList();
 
 
         }

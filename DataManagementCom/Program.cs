@@ -1,4 +1,4 @@
-﻿using GameLab_Hub;
+﻿using WpfApp1;
 using System;
 
 namespace DataManagementCom
@@ -316,7 +316,7 @@ namespace DataManagementCom
 
                 //Add the Details
                 Console.WriteLine("|---------------------------------------------|");
-                Console.WriteLine("|  Adding the Details into the Database     |");
+                Console.WriteLine("|  Adding the Details into the Database       |");
                 Console.WriteLine("|---------------------------------------------|");
                 db.Details.Add(d1);
                 db.Details.Add(d2);
