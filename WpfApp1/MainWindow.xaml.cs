@@ -12,13 +12,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-
-
         //The Com
         ComputerData CD = new ComputerData();
-
-        //Lists for Exam Labs Tab
-        List<Exam_Lab> allExam_lab = new List<Exam_Lab>();
 
         public MainWindow()
         {
@@ -107,18 +102,9 @@ namespace WpfApp1
 
         //Code for Timetable Tab
         //This create the timeable maybe use the DataGrid with the DataGridTextColumn and Binding to show the data in the DataGrid
-        private void dgTimetable_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void dgTimetable_Loaded(object sender, RoutedEventArgs e)
         {
-            //var groups = CD.Details
-            //    .Include(d => d.ExamLab)
-            //    .Include(d => d.TimeSlot)
-            //    .Select(d => new 
-            //    {
-            //       Course = d.ExamLab.CourseName,
-            //    })
-            //    .ToList();
-
-
+            dgTimetable.ItemsSource = CD.TimeSlots.Include("Details").Include("ExamLabs").ToList();
         }
         //Buttons in Exam Labs
         private void btnSearchSoftware_Click(object sender, RoutedEventArgs e)
@@ -232,9 +218,7 @@ namespace WpfApp1
 
             }
           
-        }
-
-       
+        }      
     } 
 
 }

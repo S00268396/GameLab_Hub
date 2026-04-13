@@ -47,12 +47,13 @@ namespace WpfApp1
         public string Location { get; set; }
 
         public virtual List<Computer_Lab> ComputerLabs { get; set; }
-        public virtual List<Details> TimeSlots { get; set; }  //added navigation property for one-to-many relationship
+        public virtual List<Details> Details { get; set; }  //added navigation property for one-to-many relationship
+        public virtual List<TimeSlot> TimeSlots { get; set; }  //added navigation property for one-to-many relationship
 
         public Exam_Lab()
         {
             ComputerLabs = new List<Computer_Lab>();  //initialize the list to avoid null reference issues
-            TimeSlots = new List<Details>();  //initialize the list to avoid null reference issues
+            Details = new List<Details>();  //initialize the list to avoid null reference issues
         }
 
     }
@@ -91,8 +92,8 @@ namespace WpfApp1
             //TimeSlot to details is one -to-many so the same as Computer to Computer_Lab
             modelBuilder.Entity<Details>()
                 .HasRequired(d => d.ExamLab)
-                .WithMany(e => e.TimeSlots)
-                .HasForeignKey(d => d.Exam_LabID);
+                .WithMany(e => e.Details)
+                .HasForeignKey(d => d.Exam_LabID);           
 
             modelBuilder.Entity<Details>()
               .HasRequired(d => d.TimeSlot)

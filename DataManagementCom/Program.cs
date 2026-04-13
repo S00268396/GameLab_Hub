@@ -140,15 +140,15 @@ namespace DataManagementCom
                 Exam_Lab el9 = new Exam_Lab { Exam_LabID = 949, CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",               YearGroup = "Year 4 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon" };
 
                 //TimeSlots
-                TimeSlot ts1 = new TimeSlot { Day = DayOfWeek.Monday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(11, 0, 0) };
-                TimeSlot ts2 = new TimeSlot { Day = DayOfWeek.Tuesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
-                TimeSlot ts3 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(14, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
-                TimeSlot ts4 = new TimeSlot { Day = DayOfWeek.Thursday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0) };
-                TimeSlot ts5 = new TimeSlot { Day = DayOfWeek.Friday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(12, 0, 0) };
-                TimeSlot ts6 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(14, 0, 0) };
-                TimeSlot ts7 = new TimeSlot { Day = DayOfWeek.Thursday, StartTime = new TimeSpan(10, 0, 0), EndTime = new TimeSpan(12, 0, 0) };
-                TimeSlot ts8 = new TimeSlot { Day = DayOfWeek.Tuesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(16, 0, 0) };
-                TimeSlot ts9 = new TimeSlot { Day = DayOfWeek.Monday, StartTime = new TimeSpan(9, 0, 0), EndTime = new TimeSpan(11, 0, 0) };
+                TimeSlot ts1 = new TimeSlot { Day = DayOfWeek.Monday,    StartTime = new TimeSpan(9, 0, 0),  EndTime = new TimeSpan(11, 0, 0)};
+                TimeSlot ts2 = new TimeSlot { Day = DayOfWeek.Tuesday,   StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0)};
+                TimeSlot ts3 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(14, 0, 0), EndTime = new TimeSpan(15, 0, 0)};
+                TimeSlot ts4 = new TimeSlot { Day = DayOfWeek.Thursday,  StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0)};
+                TimeSlot ts5 = new TimeSlot { Day = DayOfWeek.Friday,    StartTime = new TimeSpan(9, 0, 0),  EndTime = new TimeSpan(12, 0, 0)};
+                TimeSlot ts6 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(14, 0, 0)};
+                TimeSlot ts7 = new TimeSlot { Day = DayOfWeek.Thursday,  StartTime = new TimeSpan(10, 0, 0), EndTime = new TimeSpan(12, 0, 0)};
+                TimeSlot ts8 = new TimeSlot { Day = DayOfWeek.Tuesday,   StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(16, 0, 0)};
+                TimeSlot ts9 = new TimeSlot { Day = DayOfWeek.Monday,    StartTime = new TimeSpan(9, 0, 0),  EndTime = new TimeSpan(11, 0, 0)};
 
 
                 //Details

@@ -13,6 +13,7 @@ namespace WpfApp1
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
         public virtual List<Details> Details { get; set; }  //added navigation property for one-to-many relationship
+        public virtual List<Exam_Lab> ExamLabs { get; set; }  //added navigation property for many-to-many relationship
     }
     public class Details
     {
@@ -21,5 +22,6 @@ namespace WpfApp1
         public virtual Exam_Lab ExamLab { get; set; }
         public int TimeSlotID { get; set; }
         public virtual TimeSlot TimeSlot { get; set; }
+      
     }
 }

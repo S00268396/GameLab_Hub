@@ -62,7 +62,7 @@
                 </StackPanel>
             </TabItem.Header>
             <Grid>
-                <DataGrid x:Name="dgTimetable" AutoGenerateColumns="False" Margin="10,38,10,10" IsReadOnly="True" SelectionChanged="dgTimetable_SelectionChanged">
+                <DataGrid x:Name="dgTimetable" AutoGenerateColumns="False" Margin="10,38,10,10" IsReadOnly="True" Loaded="dgTimetable_Loaded">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Course Name" Binding="{Binding CourseName}" Width="*"/>
                         <DataGridTextColumn Header="Type Of Exam" Binding="{Binding TypeOfExam}" Width="*"/>
@@ -116,9 +116,8 @@
                 <Label x:Name="lblYear" Content="Year:" HorizontalAlignment="Left" Margin="393,14,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray"/>
                 <ComboBox x:Name="cmbxSearchYear" HorizontalAlignment="Left" Margin="434,9,0,0" VerticalAlignment="Top" Width="120" Loaded="cmbxSearchYear_Loaded" SelectionChanged="cmbxSearchYear_SelectionChanged"/>
                 <Label x:Name="lblTypeOfExam" Content="Exam:" HorizontalAlignment="Left" Margin="232,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray"/>
-                <ComboBox x:Name="cmbxSearchExam" HorizontalAlignment="Left" Margin="273,9,0,0" VerticalAlignment="Top" Width="120" Loaded="cmbxSearchYear_Loaded" SelectionChanged="cmbxSearchYear_SelectionChanged"/>
+                <ComboBox x:Name="cmbxSearchExam" HorizontalAlignment="Left" Margin="273,9,0,0" VerticalAlignment="Top" Width="120" Loaded="cmbxSearchExam_Loaded" SelectionChanged="cmbxSearchExam_SelectionChanged"/>
             </Grid>
         </TabItem>
-
     </TabControl>
 </Window>
