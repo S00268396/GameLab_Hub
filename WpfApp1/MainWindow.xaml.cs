@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Linq;
 using System.Windows.Media;
+using System.Diagnostics.PerformanceData;
 
 namespace WpfApp1
 {
@@ -106,8 +107,17 @@ namespace WpfApp1
         {
             //Maybe I need to add a relationship in this part - so the relationship is that TimeSlot have many Details and each Details have one Exam_Lab.
             dgTimetable.ItemsSource = CD.TimeSlots.Include("Details.ExamLab.ComputerLabs")
-                                                   .ToList()
-                                                   .SelectMany(t => t.Details.Select(d => new { ??}));
+                                                   .SelectMany(t => t.Details.Select(d => new 
+                                                   {
+                                                       Day = t.Day,
+                                                       CourseName = d.ExamLab.CourseName,
+                                                       TypeOfExam = d.ExamLab.TypeOfExam,
+                                                       YearGroup = d.ExamLab.YearGroup,
+                                                       TeacherName = d.ExamLab.TeacherName,
+                                                       //TimeSlot = $"{t.StartTime:hh\\:mm} - {t.EndTime:hh\\:mm}",
+                                                       //ExamLabs = d.ExamLab.ComputerLabs.Select(cl => $"Computer LabID: {cl.Computer_LabID}, Location: {cl.Location}")
+                                                   }))
+                                                  .ToList();
         }
         //Buttons in Exam Labs
         private void btnSearchSoftware_Click(object sender, RoutedEventArgs e)

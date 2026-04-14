@@ -48,8 +48,6 @@ namespace WpfApp1
 
         public virtual List<Computer_Lab> ComputerLabs { get; set; }
         public virtual List<Details> Details { get; set; }  //added navigation property for one-to-many relationship
-        public virtual List<TimeSlot> TimeSlots { get; set; }  //added navigation property for one-to-many relationship
-
         public Exam_Lab()
         {
             ComputerLabs = new List<Computer_Lab>();  //initialize the list to avoid null reference issues

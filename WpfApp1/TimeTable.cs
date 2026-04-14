@@ -12,8 +12,11 @@ namespace WpfApp1
         public DayOfWeek Day { get; set; }
         public TimeSpan StartTime { get; set; }
         public TimeSpan EndTime { get; set; }
-        public virtual List<Details> Details { get; set; }  //added navigation property for one-to-many relationship
-        public virtual List<Exam_Lab> ExamLabs { get; set; }  //added navigation property for many-to-many relationship
+        public virtual List<Details> Details { get; set; }  
+        public TimeSlot()
+        {
+            Details = new List<Details>();  
+        }
     }
     public class Details
     {

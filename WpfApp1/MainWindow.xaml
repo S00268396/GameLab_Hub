@@ -68,7 +68,7 @@
                         <DataGridTextColumn Header="Type Of Exam" Binding="{Binding TypeOfExam}" Width="*"/>
                         <DataGridTextColumn Header="Year" Binding="{Binding YearGroup}" Width="*"/>
                         <DataGridTextColumn Header="Teacher" Binding="{Binding TeacherName}" Width="*"/>
-                        <DataGridTextColumn Header="ComputerLabs" Binding="{Binding ComputerLabs}" Width="*"/>
+                        <DataGridTextColumn Header="ExamLabs" Binding="{Binding ExamLabs}" Width="*"/>
                         <DataGridTextColumn Header="Day" Binding="{Binding Day}" Width="*"/>
                         <DataGridTextColumn Header="Time" Binding="{Binding TimeSlot.StartTime}" Width="*"/>
                     </DataGrid.Columns>
