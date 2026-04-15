@@ -11,156 +11,131 @@ namespace DataManagementCom
 
             using (db)
             {
-                //Computers: 21 to 29  is in the start of the ComputerID 
-                Computer c1 = new Computer  {ComputerID = 211, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c2 = new Computer  {ComputerID = 212, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c3 = new Computer  {ComputerID = 213, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c4 = new Computer  {ComputerID = 214, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c5 = new Computer  {ComputerID = 215, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c6 = new Computer  {ComputerID = 216, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c7 = new Computer  {ComputerID = 217, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c8 = new Computer  {ComputerID = 218, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c9 = new Computer  {ComputerID = 219, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c10 = new Computer {ComputerID = 220, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c11 = new Computer {ComputerID = 221, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c12 = new Computer {ComputerID = 222, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c13 = new Computer {ComputerID = 223, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c14 = new Computer {ComputerID = 224, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c15 = new Computer {ComputerID = 225, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c16 = new Computer {ComputerID = 226, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c17 = new Computer {ComputerID = 227, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c18 = new Computer {ComputerID = 228, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c19 = new Computer {ComputerID = 229, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c20 = new Computer {ComputerID = 230, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c21 = new Computer {ComputerID = 231, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c22 = new Computer {ComputerID = 232, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c23 = new Computer {ComputerID = 233, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c24 = new Computer {ComputerID = 234, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c25 = new Computer {ComputerID = 235, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c26 = new Computer {ComputerID = 236, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c27 = new Computer {ComputerID = 237, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c28 = new Computer {ComputerID = 238, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c29 = new Computer {ComputerID = 239, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c30 = new Computer {ComputerID = 240, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c31 = new Computer {ComputerID = 241, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c32 = new Computer {ComputerID = 242, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c33 = new Computer {ComputerID = 243, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c34 = new Computer {ComputerID = 244, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c35 = new Computer {ComputerID = 245, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c36 = new Computer {ComputerID = 246, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c37 = new Computer {ComputerID = 247, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c38 = new Computer {ComputerID = 248, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c39 = new Computer {ComputerID = 249, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c40 = new Computer {ComputerID = 250, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c41 = new Computer {ComputerID = 251, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c42 = new Computer {ComputerID = 252, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c43 = new Computer {ComputerID = 253, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c44 = new Computer {ComputerID = 254, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c45 = new Computer {ComputerID = 255, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c46 = new Computer {ComputerID = 256, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c47 = new Computer {ComputerID = 257, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c48 = new Computer {ComputerID = 258, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c49 = new Computer {ComputerID = 259, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c50 = new Computer {ComputerID = 260, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c51 = new Computer {ComputerID = 261, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c52 = new Computer {ComputerID = 262, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c53 = new Computer {ComputerID = 263, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c54 = new Computer {ComputerID = 264, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c55 = new Computer {ComputerID = 266, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c56 = new Computer {ComputerID = 267, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c57 = new Computer {ComputerID = 268, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c58 = new Computer {ComputerID = 269, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c59 = new Computer {ComputerID = 280, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c60 = new Computer {ComputerID = 281, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c61 = new Computer {ComputerID = 282, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c62 = new Computer {ComputerID = 283, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c63 = new Computer {ComputerID = 284, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c64 = new Computer {ComputerID = 285, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c65 = new Computer {ComputerID = 286, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c66 = new Computer {ComputerID = 287, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c67 = new Computer {ComputerID = 288, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c68 = new Computer {ComputerID = 289, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c69 = new Computer {ComputerID = 290, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c70 = new Computer {ComputerID = 291, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c71 = new Computer {ComputerID = 292, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c72 = new Computer {ComputerID = 293, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c73 = new Computer {ComputerID = 294, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c74 = new Computer {ComputerID = 295, SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                //Computers 
+                Computer c1 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c2 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c3 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c4 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c5 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c6 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c7 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c8 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c9 = new Computer  {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c10 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c11 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c12 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c13 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c14 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c15 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c16 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c17 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c18 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c19 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c20 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c21 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c22 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c23 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c24 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c25 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c26 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c27 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c28 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c29 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c30 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c31 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c32 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c33 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c34 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c35 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c36 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c37 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c38 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c39 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c40 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c41 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c42 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c43 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c44 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c45 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c46 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c47 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c48 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c49 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c50 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c51 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c52 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c53 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c54 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c55 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c56 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c57 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c58 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c59 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c60 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c61 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c62 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c63 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c64 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c65 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c66 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c67 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c68 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c69 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c70 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c71 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c72 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c73 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
+                Computer c74 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };                    
+                    
+                //Labs 
+                Computer_Lab cl1 = new Computer_Lab()   {Location = "B2307", IsAvailable = false };
+                Computer_Lab cl2 = new Computer_Lab()   {Location = "B2308", IsAvailable = true };
+                Computer_Lab cl3 = new Computer_Lab()   {Location = "B2309", IsAvailable = false };
+                Computer_Lab cl4 = new Computer_Lab()   {Location = "A2329", IsAvailable = true };
+                Computer_Lab cl5 = new Computer_Lab()   {Location = "A2324", IsAvailable = false };
+                Computer_Lab cl6 = new Computer_Lab()   {Location = "A2326", IsAvailable = true };
+                Computer_Lab cl7 = new Computer_Lab()   {Location = "C2246", IsAvailable = false };
+                Computer_Lab cl8 = new Computer_Lab()   {Location = "C2244", IsAvailable = true };
+                Computer_Lab cl9 = new Computer_Lab()   {Location = "C2248", IsAvailable = false };
+                Computer_Lab cl10 = new Computer_Lab()  {Location = "B2448", IsAvailable = false };
+                Computer_Lab cl11 = new Computer_Lab()  {Location = "B2444", IsAvailable = true };
+                Computer_Lab cl12 = new Computer_Lab()  {Location = "B2445", IsAvailable = false };
+                Computer_Lab cl13 = new Computer_Lab()  {Location = "A2642", IsAvailable = true };
+                Computer_Lab cl14 = new Computer_Lab()  {Location = "A2643", IsAvailable = false };
+                Computer_Lab cl15 = new Computer_Lab()  {Location = "A2645", IsAvailable = true };
+                Computer_Lab cl16 = new Computer_Lab()  {Location = "C2642", IsAvailable = false };
+                Computer_Lab cl17 = new Computer_Lab()  {Location = "C2643", IsAvailable = true };
+                Computer_Lab cl18 = new Computer_Lab()  {Location = "C2644", IsAvailable = true };
+                Computer_Lab cl19 = new Computer_Lab()  {Location = "B2954", IsAvailable = false };
+                Computer_Lab cl20 = new Computer_Lab()  {Location = "B2955", IsAvailable = true };
+                Computer_Lab cl21 = new Computer_Lab()  {Location = "B2956", IsAvailable = false };
+                Computer_Lab cl22 = new Computer_Lab()  {Location = "A2193", IsAvailable = true };
+                Computer_Lab cl23 = new Computer_Lab()  {Location = "A2194", IsAvailable = false };
+                Computer_Lab cl24 = new Computer_Lab()  {Location = "A2195", IsAvailable = true };
+                Computer_Lab cl25 = new Computer_Lab()  {Location = "C2154", IsAvailable = false };
+                Computer_Lab cl26 = new Computer_Lab()  {Location = "C2156", IsAvailable = true };
+                Computer_Lab cl27 = new Computer_Lab()  {Location = "C2157", IsAvailable = false };
+                Computer_Lab cl28 = new Computer_Lab()  {Location = "B2236", IsAvailable = false };
+                Computer_Lab cl39 = new Computer_Lab()  {Location = "B2238", IsAvailable = true };
+                Computer_Lab cl30 = new Computer_Lab()  {Location = "B2239", IsAvailable = false };
+                Computer_Lab cl31 = new Computer_Lab()  {Location = "A6578", IsAvailable = true };
+                Computer_Lab cl32 = new Computer_Lab()  {Location = "A6579", IsAvailable = false };
+                Computer_Lab cl33 = new Computer_Lab()  {Location = "A6574", IsAvailable = true };
+                Computer_Lab cl34 = new Computer_Lab()  {Location = "C3465", IsAvailable = false };
+                Computer_Lab cl35 = new Computer_Lab()  {Location = "C3466", IsAvailable = true };
+                Computer_Lab cl36 = new Computer_Lab()  {Location = "C3467", IsAvailable = true };
 
-
-                //Labs: 36 to 38 is in the start of the Computer_LabID 
-                Computer_Lab cl1 = new Computer_Lab()   {Computer_LabID = 361, Location = "B2307", IsAvailable = false };
-                Computer_Lab cl2 = new Computer_Lab()   {Computer_LabID = 362, Location = "B2308", IsAvailable = true };
-                Computer_Lab cl3 = new Computer_Lab()   {Computer_LabID = 363, Location = "B2309", IsAvailable = false };
-                Computer_Lab cl4 = new Computer_Lab()   {Computer_LabID = 364, Location = "A2329", IsAvailable = true };
-                Computer_Lab cl5 = new Computer_Lab()   {Computer_LabID = 365, Location = "A2324", IsAvailable = false };
-                Computer_Lab cl6 = new Computer_Lab()   {Computer_LabID = 366, Location = "A2326", IsAvailable = true };
-                Computer_Lab cl7 = new Computer_Lab()   {Computer_LabID = 367, Location = "C2246", IsAvailable = false };
-                Computer_Lab cl8 = new Computer_Lab()   {Computer_LabID = 368, Location = "C2244", IsAvailable = true };
-                Computer_Lab cl9 = new Computer_Lab()   {Computer_LabID = 369, Location = "C2248", IsAvailable = false };
-                Computer_Lab cl10 = new Computer_Lab()  {Computer_LabID = 361, Location = "B2448", IsAvailable = false };
-                Computer_Lab cl11 = new Computer_Lab()  {Computer_LabID = 362, Location = "B2444", IsAvailable = true };
-                Computer_Lab cl12 = new Computer_Lab()  {Computer_LabID = 363, Location = "B2445", IsAvailable = false };
-                Computer_Lab cl13 = new Computer_Lab()  {Computer_LabID = 364, Location = "A2642", IsAvailable = true };
-                Computer_Lab cl14 = new Computer_Lab()  {Computer_LabID = 365, Location = "A2643", IsAvailable = false };
-                Computer_Lab cl15 = new Computer_Lab()  {Computer_LabID = 366, Location = "A2645", IsAvailable = true };
-                Computer_Lab cl16 = new Computer_Lab()  {Computer_LabID = 367, Location = "C2642", IsAvailable = false };
-                Computer_Lab cl17 = new Computer_Lab()  {Computer_LabID = 368, Location = "C2643", IsAvailable = true };
-                Computer_Lab cl18 = new Computer_Lab()  {Computer_LabID = 368, Location = "C2644", IsAvailable = true };
-                Computer_Lab cl19 = new Computer_Lab()  {Computer_LabID = 369, Location = "B2954", IsAvailable = false };
-                Computer_Lab cl20 = new Computer_Lab()  {Computer_LabID = 370, Location = "B2955", IsAvailable = true };
-                Computer_Lab cl21 = new Computer_Lab()  {Computer_LabID = 371, Location = "B2956", IsAvailable = false };
-                Computer_Lab cl22 = new Computer_Lab()  {Computer_LabID = 372, Location = "A2193", IsAvailable = true };
-                Computer_Lab cl23 = new Computer_Lab()  {Computer_LabID = 373, Location = "A2194", IsAvailable = false };
-                Computer_Lab cl24 = new Computer_Lab()  {Computer_LabID = 374, Location = "A2195", IsAvailable = true };
-                Computer_Lab cl25 = new Computer_Lab()  {Computer_LabID = 375, Location = "C2154", IsAvailable = false };
-                Computer_Lab cl26 = new Computer_Lab()  {Computer_LabID = 376, Location = "C2156", IsAvailable = true };
-                Computer_Lab cl27 = new Computer_Lab()  {Computer_LabID = 377, Location = "C2157", IsAvailable = false };
-                Computer_Lab cl28 = new Computer_Lab()  {Computer_LabID = 378, Location = "B2236", IsAvailable = false };
-                Computer_Lab cl39 = new Computer_Lab()  {Computer_LabID = 379, Location = "B2238", IsAvailable = true };
-                Computer_Lab cl30 = new Computer_Lab()  {Computer_LabID = 380, Location = "B2239", IsAvailable = false };
-                Computer_Lab cl31 = new Computer_Lab()  {Computer_LabID = 381, Location = "A6578", IsAvailable = true };
-                Computer_Lab cl32 = new Computer_Lab()  {Computer_LabID = 382, Location = "A6579", IsAvailable = false };
-                Computer_Lab cl33 = new Computer_Lab()  {Computer_LabID = 383, Location = "A6574", IsAvailable = true };
-                Computer_Lab cl34 = new Computer_Lab()  {Computer_LabID = 384, Location = "C3465", IsAvailable = false };
-                Computer_Lab cl35 = new Computer_Lab()  {Computer_LabID = 385, Location = "C3466", IsAvailable = true };
-                Computer_Lab cl36 = new Computer_Lab()  {Computer_LabID = 385, Location = "C3467", IsAvailable = true };
-
-
-
-                //Exam: 94 is in the start of the Computer_LabID 
-                Exam_Lab el1 = new Exam_Lab { Exam_LabID = 941, CourseName = "Games Development L7 - Y2", TypeOfExam = "3D Game Programming",               YearGroup = "Year 2 Group B",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon"};
-                Exam_Lab el2 = new Exam_Lab { Exam_LabID = 942, CourseName = "Games Development L7 - Y3", TypeOfExam = "Math 3",                            YearGroup = "Year 3 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Kieran Hughes" };
-                Exam_Lab el3 = new Exam_Lab { Exam_LabID = 943, CourseName = "Games Development L7 - Y1", TypeOfExam = "Object Oriented Development",       YearGroup = "Year 1 Group C",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Keith McManus" };
-                Exam_Lab el4 = new Exam_Lab { Exam_LabID = 944, CourseName = "Games Development L6 - Y2", TypeOfExam = "Software Quality and Testing",      YearGroup = "Year 2 Group D",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
-                Exam_Lab el5 = new Exam_Lab { Exam_LabID = 945, CourseName = "Games Development L6 - Y1", TypeOfExam = "Math 1",                            YearGroup = "Year 1 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Kieran Hughes" };
-                Exam_Lab el6 = new Exam_Lab { Exam_LabID = 946, CourseName = "Games Development L8 - Y1", TypeOfExam = "Software Quality and Testing ",     YearGroup = "Year 1 Group B",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
-                Exam_Lab el7 = new Exam_Lab { Exam_LabID = 947, CourseName = "Games Development L8 - Y2", TypeOfExam = "Object Oriented Development",       YearGroup = "Year 2 Group C",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Keith McManus" };
-                Exam_Lab el8 = new Exam_Lab { Exam_LabID = 948, CourseName = "Games Development L8 - Y3", TypeOfExam = "Software Quality and Testing",      YearGroup = "Year 3 Group C",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Vivion Kinsella" };
-                Exam_Lab el9 = new Exam_Lab { Exam_LabID = 949, CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",               YearGroup = "Year 4 Group A",       DateOfExam = new DateTime(2024, 12, 15), TeacherName = "Neil Gannon" };
-
-                //TimeSlots
-                TimeSlot ts1 = new TimeSlot { Day = DayOfWeek.Monday,    StartTime = new TimeSpan(9, 0, 0),  EndTime = new TimeSpan(11, 0, 0)};
-                TimeSlot ts2 = new TimeSlot { Day = DayOfWeek.Tuesday,   StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0)};
-                TimeSlot ts3 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(14, 0, 0), EndTime = new TimeSpan(15, 0, 0)};
-                TimeSlot ts4 = new TimeSlot { Day = DayOfWeek.Thursday,  StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(15, 0, 0)};
-                TimeSlot ts5 = new TimeSlot { Day = DayOfWeek.Friday,    StartTime = new TimeSpan(9, 0, 0),  EndTime = new TimeSpan(12, 0, 0)};
-                TimeSlot ts6 = new TimeSlot { Day = DayOfWeek.Wednesday, StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(14, 0, 0)};
-                TimeSlot ts7 = new TimeSlot { Day = DayOfWeek.Thursday,  StartTime = new TimeSpan(10, 0, 0), EndTime = new TimeSpan(12, 0, 0)};
-                TimeSlot ts8 = new TimeSlot { Day = DayOfWeek.Tuesday,   StartTime = new TimeSpan(13, 0, 0), EndTime = new TimeSpan(16, 0, 0)};
-                TimeSlot ts9 = new TimeSlot { Day = DayOfWeek.Monday,    StartTime = new TimeSpan(9, 0, 0),  EndTime = new TimeSpan(11, 0, 0)};
-
-
-                //Details
-                Details d1 = new Details { ExamLab = el1, TimeSlot = ts1};
-                Details d2 = new Details { ExamLab = el2, TimeSlot = ts2 };
-                Details d3 = new Details { ExamLab = el3, TimeSlot = ts3 };
-                Details d4 = new Details { ExamLab = el4, TimeSlot = ts4 };
-                Details d5 = new Details { ExamLab = el5, TimeSlot = ts5 };
-                Details d6 = new Details { ExamLab = el6, TimeSlot = ts6 };
-                Details d7 = new Details { ExamLab = el7, TimeSlot = ts7 };
-                Details d8 = new Details { ExamLab = el8, TimeSlot = ts8 };
-                Details d9 = new Details { ExamLab = el9, TimeSlot = ts9 };
+                //Exam 
+                Exam_Lab el1 = new Exam_Lab {CourseName = "Games Development L7 - Y2", TypeOfExam = "3D Game Programming",           YearGroup = "Year 2 Group B",  DateOfExam = new DateTime(2024, 12, 15, 10, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Neil Gannon"};
+                Exam_Lab el2 = new Exam_Lab {CourseName = "Games Development L7 - Y3", TypeOfExam = "Math 3",                        YearGroup = "Year 3 Group A",  DateOfExam = new DateTime(2024, 12, 15, 12, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Kieran Hughes" };
+                Exam_Lab el3 = new Exam_Lab {CourseName = "Games Development L7 - Y1", TypeOfExam = "Object Oriented Development",   YearGroup = "Year 1 Group C",  DateOfExam = new DateTime(2024, 12, 15, 09, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Keith McManus" };
+                Exam_Lab el4 = new Exam_Lab {CourseName = "Games Development L6 - Y2", TypeOfExam = "Software Quality and Testing",  YearGroup = "Year 2 Group D",  DateOfExam = new DateTime(2024, 12, 15, 01, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Vivion Kinsella" };
+                Exam_Lab el5 = new Exam_Lab {CourseName = "Games Development L6 - Y1", TypeOfExam = "Math 1",                        YearGroup = "Year 1 Group A",  DateOfExam = new DateTime(2024, 12, 15, 02, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Kieran Hughes" };
+                Exam_Lab el6 = new Exam_Lab {CourseName = "Games Development L8 - Y1", TypeOfExam = "Software Quality and Testing",  YearGroup = "Year 1 Group B",  DateOfExam = new DateTime(2024, 12, 15, 04, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Vivion Kinsella" };
+                Exam_Lab el7 = new Exam_Lab {CourseName = "Games Development L8 - Y2", TypeOfExam = "Object Oriented Development",   YearGroup = "Year 2 Group C",  DateOfExam = new DateTime(2024, 12, 15, 02, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Keith McManus" };
+                Exam_Lab el8 = new Exam_Lab {CourseName = "Games Development L8 - Y3", TypeOfExam = "Software Quality and Testing",  YearGroup = "Year 3 Group C",  DateOfExam = new DateTime(2024, 12, 15, 03, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Vivion Kinsella" };
+                Exam_Lab el9 = new Exam_Lab {CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",           YearGroup = "Year 4 Group A",  DateOfExam = new DateTime(2024, 12, 15, 05, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Neil Gannon" };
+                              
 
                 //Add the Computers into the Labs
                 Console.WriteLine(" ---------------------------------------------");
@@ -299,34 +274,6 @@ namespace DataManagementCom
                 db.Exam_Labs.Add(el7);
                 db.Exam_Labs.Add(el8);
                 db.Exam_Labs.Add(el9);
-
-                //Add the TimeSlots
-                Console.WriteLine("|---------------------------------------------|");
-                Console.WriteLine("|  Adding the TimeSlots into the Database     |");
-                Console.WriteLine("|---------------------------------------------|");
-                db.TimeSlots.Add(ts1);   
-                db.TimeSlots.Add(ts2);
-                db.TimeSlots.Add(ts3);
-                db.TimeSlots.Add(ts4);
-                db.TimeSlots.Add(ts5);
-                db.TimeSlots.Add(ts6);
-                db.TimeSlots.Add(ts7);
-                db.TimeSlots.Add(ts8);
-                db.TimeSlots.Add(ts9);
-
-                //Add the Details
-                Console.WriteLine("|---------------------------------------------|");
-                Console.WriteLine("|  Adding the Details into the Database       |");
-                Console.WriteLine("|---------------------------------------------|");
-                db.Details.Add(d1);
-                db.Details.Add(d2);
-                db.Details.Add(d3);
-                db.Details.Add(d4);
-                db.Details.Add(d5);
-                db.Details.Add(d6);
-                db.Details.Add(d7);
-                db.Details.Add(d8);
-                db.Details.Add(d9);
 
                 //Save the changes into the Database
                 Console.WriteLine("|---------------------------------------------|");

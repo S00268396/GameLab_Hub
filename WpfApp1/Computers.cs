@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls.Primitives;
 
 namespace WpfApp1
 {
@@ -42,16 +43,13 @@ namespace WpfApp1
         public string CourseName { get; set; }
         public string YearGroup { get; set; }
         public string TypeOfExam { get; set; }
-        public DateTime DateOfExam { get; set; }
+        public DateTime DateOfExam { get; set; }       
+        public string LongOfTime { get; set; }
         public string TeacherName { get; set; }
-        public string Location { get; set; }
-
         public virtual List<Computer_Lab> ComputerLabs { get; set; }
-        public virtual List<Details> Details { get; set; }  //added navigation property for one-to-many relationship
         public Exam_Lab()
         {
             ComputerLabs = new List<Computer_Lab>();  //initialize the list to avoid null reference issues
-            Details = new List<Details>();  //initialize the list to avoid null reference issues
         }
 
     }
@@ -63,8 +61,6 @@ namespace WpfApp1
         public DbSet<Computer> Computers { get; set; }
         public DbSet<Computer_Lab> Computer_Labs { get; set; }
         public DbSet<Exam_Lab> Exam_Labs { get; set; }
-        public DbSet<TimeSlot> TimeSlots { get; set; }
-        public DbSet<Details> Details { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -85,19 +81,6 @@ namespace WpfApp1
                     m.MapLeftKey("Exam_LabID");
                     m.MapRightKey("Computer_LabID");
                 });
-
-            //Timetable
-            //TimeSlot to details is one -to-many so the same as Computer to Computer_Lab
-            modelBuilder.Entity<Details>()
-                .HasRequired(d => d.ExamLab)
-                .WithMany(e => e.Details)
-                .HasForeignKey(d => d.Exam_LabID);           
-
-            modelBuilder.Entity<Details>()
-              .HasRequired(d => d.TimeSlot)
-              .WithMany(t => t.Details)
-              .HasForeignKey(d => d.TimeSlotID);
-
         }
     }
 }

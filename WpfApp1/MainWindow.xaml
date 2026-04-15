@@ -62,15 +62,16 @@
                 </StackPanel>
             </TabItem.Header>
             <Grid>
-                <DataGrid x:Name="dgTimetable" AutoGenerateColumns="False" Margin="10,38,10,10" IsReadOnly="True" Loaded="dgTimetable_Loaded">
+                <DataGrid x:Name="dgTimetable" AutoGenerateColumns="False" Margin="0,-3,0,51" IsReadOnly="True" Loaded="dgTimetable_Loaded" >
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Course Name" Binding="{Binding CourseName}" Width="*"/>
                         <DataGridTextColumn Header="Type Of Exam" Binding="{Binding TypeOfExam}" Width="*"/>
                         <DataGridTextColumn Header="Year" Binding="{Binding YearGroup}" Width="*"/>
                         <DataGridTextColumn Header="Teacher" Binding="{Binding TeacherName}" Width="*"/>
-                        <DataGridTextColumn Header="ExamLabs" Binding="{Binding ExamLabs}" Width="*"/>
-                        <DataGridTextColumn Header="Day" Binding="{Binding Day}" Width="*"/>
-                        <DataGridTextColumn Header="Time" Binding="{Binding TimeSlot.StartTime}" Width="*"/>
+                        <DataGridTextColumn Header="Exam Labs" Binding="{Binding Labs}" Width="*"/>
+                        <DataGridTextColumn Header="Date Of Exam" Binding="{Binding DateOfexam, StringFormat=dd/MM/yyyy}" Width="*"/>
+                        <DataGridTextColumn Header="Time" Binding="{Binding DateOfExam, StringFormat=hh:mm tt}" Width="*"/>
+                        <DataGridTextColumn Header="Long Of Time" Binding="{Binding LongOfTime}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Button x:Name="btnSearchSoftware1" Content="Search Software" HorizontalAlignment="Left" Margin="525,319,0,0" VerticalAlignment="Top" Background="Lime" BorderBrush="Lime" Foreground="#FF1E1E1E" FontWeight="Bold" Click="btnSearchSoftware1_Click"/>
@@ -106,11 +107,11 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
                 <Label x:Name="lbCourse" Content="Course:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray" Grid.Column="1"/>
-                <Button x:Name="btnTimetable1" Content="Timetable" HorizontalAlignment="Left" Margin="155,303,0,0" VerticalAlignment="Top" Grid.Column="3" Background="DarkOrange" FontWeight="Bold" BorderBrush="DarkOrange" Foreground="DarkSlateGray" Click="btnTimetable1_Click"/>
-                <Button x:Name="btnSearchSoftware" Content="Search Software" HorizontalAlignment="Left" Margin="434,303,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3" Background="SpringGreen" BorderBrush="SpringGreen" Foreground="DarkSlateGray" FontWeight="Bold" Grid.Column="1" Click="btnSearchSoftware_Click"/>
+                <Button x:Name="btnTimetable1" Content="Timetable" HorizontalAlignment="Left" Margin="155,344,0,0" VerticalAlignment="Top" Background="DarkOrange" FontWeight="Bold" BorderBrush="DarkOrange" Foreground="DarkSlateGray" Click="btnTimetable1_Click"/>
+                <Button x:Name="btnSearchSoftware" Content="Search Software" HorizontalAlignment="Left" Margin="434,344,0,0" VerticalAlignment="Top" Background="SpringGreen" BorderBrush="SpringGreen" Foreground="DarkSlateGray" FontWeight="Bold" Click="btnSearchSoftware_Click"/>
                 <ComboBox x:Name="cmbxSearchCourse" Grid.Column="1" HorizontalAlignment="Left" Margin="80,7,0,0" VerticalAlignment="Top" Width="120" Loaded="cmbxSearchCourse_Loaded" SelectionChanged="cmbxSearchCourse_SelectionChanged"/>
-                <TextBlock x:Name="tblExaminfo" HorizontalAlignment="Left" Margin="460,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="106" Width="278" Text="ExamInfo" Grid.Column="1" Grid.ColumnSpan="3"/>
-                <TextBox x:Name="txbLabinfo" HorizontalAlignment="Left" Margin="460,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="141" Width="278" Text="LabInfo" Grid.Column="1" Grid.ColumnSpan="3"/>
+                <TextBlock x:Name="tblExaminfo" HorizontalAlignment="Left" Margin="460,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="142" Width="278" Text="ExamInfo"/>
+                <TextBox x:Name="txbLabinfo" HorizontalAlignment="Left" Margin="460,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="151" Width="278" Text="LabInfo"/>
                 <Label x:Name="lblTeacher" Content="Teacher:" HorizontalAlignment="Left" Margin="572,9,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray"/>
                 <ComboBox x:Name="cmbxSearchTeacher" HorizontalAlignment="Left" Margin="645,7,0,0" VerticalAlignment="Top" Width="120" Loaded="cmbxSearchTeacher_Loaded" SelectionChanged="cmbxSearchTeacher_SelectionChanged"/>
                 <Label x:Name="lblYear" Content="Year:" HorizontalAlignment="Left" Margin="393,14,0,0" VerticalAlignment="Top" FontWeight="Bold" Foreground="DarkSlateGray"/>

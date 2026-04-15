@@ -23,8 +23,8 @@ namespace WpfApp1
 
         //Code for Search Software Tab
         private void tblmSearchSoftware_Loaded(object sender, RoutedEventArgs e)
-        {
-            //This work but it show {Computer_LabID = 1} {Loction = A235}
+        {  
+            //This work but it show {Computer_LabID = 1} {Loction = A235} 
             //var AllComs = CD.Computer_Labs
             //           .Select(id => new
             //           {
@@ -106,16 +106,17 @@ namespace WpfApp1
         private void dgTimetable_Loaded(object sender, RoutedEventArgs e)
         {
             //Maybe I need to add a relationship in this part - so the relationship is that TimeSlot have many Details and each Details have one Exam_Lab.
-            dgTimetable.ItemsSource = CD.TimeSlots.Include("Details.ExamLab.ComputerLabs")
-                                                   .SelectMany(t => t.Details.Select(d => new 
+            dgTimetable.ItemsSource = CD.Exam_Labs.Include("ComputerLabs")
+                                                   .SelectMany(el => el.ComputerLabs.Select(c => new
                                                    {
-                                                       Day = t.Day,
-                                                       CourseName = d.ExamLab.CourseName,
-                                                       TypeOfExam = d.ExamLab.TypeOfExam,
-                                                       YearGroup = d.ExamLab.YearGroup,
-                                                       TeacherName = d.ExamLab.TeacherName,
-                                                       //TimeSlot = $"{t.StartTime:hh\\:mm} - {t.EndTime:hh\\:mm}",
-                                                       //ExamLabs = d.ExamLab.ComputerLabs.Select(cl => $"Computer LabID: {cl.Computer_LabID}, Location: {cl.Location}")
+                                                       DateOfExam = el.DateOfExam,
+                                                       CourseName = el.CourseName,
+                                                       TypeOfExam = el.TypeOfExam,
+                                                       YearGroup = el.YearGroup,
+                                                       TeacherName = el.TeacherName,
+                                                       DateOfexam = el.DateOfExam,
+                                                       LongOfTime = el.LongOfTime,
+                                                       Labs = "Computer LabID: "+ c.Computer_LabID + " - Location: " + c.Location 
                                                    }))
                                                   .ToList();
         }
@@ -147,6 +148,8 @@ namespace WpfApp1
                                    $"Year Group: {ExamSelected.YearGroup}\n" +
                                    $"Type Of Exam: {ExamSelected.TypeOfExam}\n" +
                                    $"Date Of Exam: {ExamSelected.DateOfExam}\n" +
+                                   $"Time: {ExamSelected.LongOfTime}\n"+
+                                   $"Long Of Time: {ExamSelected.LongOfTime}\n" +
                                    $"Teacher Name: {ExamSelected.TeacherName}\n";
 
                 txbLabinfo.Text = string.Join("\n\n", ExamSelected.ComputerLabs.Select(cl => $"Computer LabID: {cl.Computer_LabID}\n Location: {cl.Location}"));
@@ -231,7 +234,12 @@ namespace WpfApp1
 
             }
           
-        }      
+        }
+
+        private void dgTimetable_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
+        {
+
+        }
     } 
 
 }
