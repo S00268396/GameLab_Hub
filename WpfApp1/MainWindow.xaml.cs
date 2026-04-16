@@ -175,13 +175,24 @@ namespace WpfApp1
         {
             if (cmbxSearchCourse.SelectedItem is Exam_Lab selectedCourse)
             {
-                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedCourse };
+                if (selectedCourse.CourseName == "All Courses")
+                {
+                    lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();
+                }
+                else
+                {
+
+                    lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedCourse };
+
+                }
             }
         }
 
         private void cmbxSearchTeacher_Loaded(object sender, RoutedEventArgs e)
         {
             var Teachers = CD.Exam_Labs.ToList();
+
+            Teachers.Insert(0, new Exam_Lab { TeacherName = "All Teacher"});
 
             cmbxSearchTeacher.ItemsSource = Teachers;
 
@@ -193,13 +204,24 @@ namespace WpfApp1
 
             if (cmbxSearchTeacher.SelectedItem is Exam_Lab selectedTeacher)
             {
-                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedTeacher };
+                if (selectedTeacher.TeacherName == "All Teacher")
+                {
+                    lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();
+                }
+                else
+                {
+
+                    lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedTeacher };
+
+                }
             }
         }
 
         private void cmbxSearchYear_Loaded(object sender, RoutedEventArgs e)
         {
             var Years = CD.Exam_Labs.ToList();
+
+            Years.Insert(0, new Exam_Lab { YearGroup = "All Years"});
             cmbxSearchYear.ItemsSource = Years;
             cmbxSearchYear.DisplayMemberPath = "YearGroup";
         }
@@ -208,7 +230,17 @@ namespace WpfApp1
         {
             if (cmbxSearchYear.SelectedItem is Exam_Lab selectedYear)
             {
-                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedYear };
+
+                if (selectedYear.YearGroup == "All Years")
+                {
+                    lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();
+                }
+                else
+                {
+
+                    lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedYear };
+
+                }
 
             }
         }
@@ -216,30 +248,31 @@ namespace WpfApp1
         private void cmbxSearchExam_Loaded(object sender, RoutedEventArgs e)
         {
             var Exams = CD.Exam_Labs.ToList();
+
+            Exams.Insert(0, new Exam_Lab { TypeOfExam = "All Types" });
             cmbxSearchExam.ItemsSource = Exams;
             cmbxSearchExam.DisplayMemberPath = "TypeOfExam";
         }
 
         private void cmbxSearchExam_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if (cmbxSearchExam.SelectedItem == null)
-            //{
-            //    lbxComputerExam.ItemsSource = null;
-            //    return;
-            //}
-
             if (cmbxSearchExam.SelectedItem is Exam_Lab selectedExam)
             {
-                lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedExam };
+                if (selectedExam.TypeOfExam == "All Types")
+                {
+                    lbxComputerExam.ItemsSource = CD.Exam_Labs.ToList();
+                }
+                else                
+                {
+
+                    lbxComputerExam.ItemsSource = new List<Exam_Lab> { selectedExam };
+
+                }
 
             }
           
         }
-
-        private void dgTimetable_AccessKeyPressed(object sender, AccessKeyPressedEventArgs e)
-        {
-
-        }
+  
     } 
 
 }
