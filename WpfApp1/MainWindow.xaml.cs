@@ -106,8 +106,9 @@ namespace WpfApp1
         private void dgTimetable_Loaded(object sender, RoutedEventArgs e)
         {
             //Maybe I need to add a relationship in this part - so the relationship is that TimeSlot have many Details and each Details have one Exam_Lab.
+            //Because the relationship is one to many, it duplicating three times in the Exam_Lab so I need to use Select
             dgTimetable.ItemsSource = CD.Exam_Labs.Include("ComputerLabs")
-                                                   .SelectMany(el => el.ComputerLabs.Select(c => new
+                                                   .Select(el => el.ComputerLabs.Select(c => new
                                                    {
                                                        DateOfExam = el.DateOfExam,
                                                        CourseName = el.CourseName,
