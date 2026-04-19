@@ -5,6 +5,7 @@ using System.Windows.Input;
 using System.Linq;
 using System.Windows.Media;
 using System.Diagnostics.PerformanceData;
+using System.Text;
 
 namespace WpfApp1
 {
@@ -48,9 +49,9 @@ namespace WpfApp1
 
             if (RoomSelected != null)
             {
-                tblRoominfo.Text = $"Computer LabID: {RoomSelected.Computer_LabID}\n" +
-                                   $"Location: {RoomSelected.Location}\n" +
-                                   $"Is Available: {(RoomSelected.IsAvailable ? "Yes" : "No")}\n";
+                //tblRoominfo.Text = $"Computer LabID: {RoomSelected.Computer_LabID}\n" +
+                //                   $"Location: {RoomSelected.Location}\n" +
+                //                   $"Is Available: {(RoomSelected.IsAvailable ? "Yes" : "No")}\n";
 
                 //This work but it don't show the computers. Maybe use the join things
 
@@ -60,7 +61,27 @@ namespace WpfApp1
                 // After look up the string Join -so it takes the datas and join in into one string(Maybe it will work)
                 //It does work but it only show one computer, Maybe use a TextBox and not TextBlock - I was right
                 //https://stackoverflow.com/questions/9310607/string-join-in-linq-to-entity-queries
-                tbxCominfo.Text = string.Join("\n\n", RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
+                //tbxCominfo.Text = string.Join("\n\n", RoomSelected.Computers.Select(ec => $"ComputerID: {ec.ComputerID} \n SoftwareInstalled: {ec.SoftwareInstalled}"));
+
+                //So It don't look good when the Computer Labs Info and Computers are not together so I find something call StringBuilder, it a mutable class - 
+                //It acts like a builder that holds a buffer of characters and allows you to append, insert, or remove text without creating a new string every time.
+                //https://learn.microsoft.com/en-us/dotnet/standard/base-types/stringbuilder
+
+                StringBuilder sb = new StringBuilder();
+                sb.AppendLine($"Computer LabID:  {RoomSelected.Computer_LabID}");
+                sb.AppendLine($"Location:  {RoomSelected.Location}");
+                sb.AppendLine($"Available:  {(RoomSelected.IsAvailable ? "Yes" : "No")}");
+                sb.AppendLine("\n");
+                sb.AppendLine("Computers in the Computer Lab:");
+
+                //List all Computers in this Lab
+                foreach (var computer in RoomSelected.Computers)
+                {
+                    sb.AppendLine($"ComputerID: {computer.ComputerID} \n SoftwareInstalled: {computer.SoftwareInstalled}");
+                }
+
+                tblRoominfo.Text = sb.ToString();
+
             }
 
 
@@ -144,16 +165,38 @@ namespace WpfApp1
 
             if (ExamSelected != null)
             {
-                tblExaminfo.Text = $"Exam LabID: {ExamSelected.Exam_LabID}\n" +
-                                   $"Course Name: {ExamSelected.CourseName}\n" +
-                                   $"Year Group: {ExamSelected.YearGroup}\n" +
-                                   $"Type Of Exam: {ExamSelected.TypeOfExam}\n" +
-                                   $"Date Of Exam: {ExamSelected.DateOfExam}\n" +
-                                   $"Time: {ExamSelected.LongOfTime}\n"+
-                                   $"Long Of Time: {ExamSelected.LongOfTime}\n" +
-                                   $"Teacher Name: {ExamSelected.TeacherName}\n";
+                //tblExaminfo.Text = $"Exam LabID: {ExamSelected.Exam_LabID}\n" +
+                //                   $"Course Name: {ExamSelected.CourseName}\n" +
+                //                   $"Year Group: {ExamSelected.YearGroup}\n" +
+                //                   $"Type Of Exam: {ExamSelected.TypeOfExam}\n" +
+                //                   $"Date Of Exam: {ExamSelected.DateOfExam}\n" +
+                //                   $"Time: {ExamSelected.LongOfTime}\n"+
+                //                   $"Long Of Time: {ExamSelected.LongOfTime}\n" +
+                //                   $"Teacher Name: {ExamSelected.TeacherName}\n";                               
 
-                txbLabinfo.Text = string.Join("\n\n", ExamSelected.ComputerLabs.Select(cl => $"Computer LabID: {cl.Computer_LabID}\n Location: {cl.Location}"));
+                StringBuilder sB= new StringBuilder();
+                sB.AppendLine($"Exam LabID:  {ExamSelected.Exam_LabID}");
+                sB.AppendLine($"Course Name:  {ExamSelected.CourseName}");
+                sB.AppendLine($"Year Group:  {ExamSelected.YearGroup}");
+                sB.AppendLine($"Type Of Exam:  {ExamSelected.TypeOfExam}");
+                sB.AppendLine($"Date Of Exam:  {ExamSelected.DateOfExam}");
+                sB.AppendLine($"Time:  {ExamSelected.LongOfTime}");
+                sB.AppendLine($"long Of Time:  {ExamSelected.LongOfTime}");
+                sB.AppendLine($"Teacher Name:  {ExamSelected.TeacherName}");
+                sB.AppendLine();
+                sB.AppendLine("Assigned Computer Labs:");
+
+                if (ExamSelected.ComputerLabs != null)
+                {
+                    //List all Computer Lab in this Exam
+                    foreach (var exam in ExamSelected.ComputerLabs)
+                    {
+                        sB.AppendLine($"Computer LabID: {exam.Computer_LabID}\n Location: {exam.Location}");
+                    }
+
+                }
+
+                tblExaminfo.Text = sB.ToString();
             }
 
 
@@ -273,7 +316,6 @@ namespace WpfApp1
             }
           
         }
-  
     } 
 
 }
