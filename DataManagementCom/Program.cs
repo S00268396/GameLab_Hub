@@ -85,7 +85,7 @@ namespace DataManagementCom
                 Computer c71 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
                 Computer c72 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
                 Computer c73 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };
-                Computer c74 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };                    
+                //Computer c74 = new Computer {SoftwareInstalled = "Adobe Photoshop, Microsoft Office, Unity Hub, Visual Studio" };                    
                     
                 //Labs 
                 Computer_Lab cl1 = new Computer_Lab()   {Location = "B2307", IsAvailable = false };
@@ -116,7 +116,7 @@ namespace DataManagementCom
                 Computer_Lab cl26 = new Computer_Lab()  {Location = "C2156", IsAvailable = true };
                 Computer_Lab cl27 = new Computer_Lab()  {Location = "C2157", IsAvailable = false };
                 Computer_Lab cl28 = new Computer_Lab()  {Location = "B2236", IsAvailable = false };
-                Computer_Lab cl39 = new Computer_Lab()  {Location = "B2238", IsAvailable = true };
+                Computer_Lab cl29 = new Computer_Lab()  {Location = "B2238", IsAvailable = true };
                 Computer_Lab cl30 = new Computer_Lab()  {Location = "B2239", IsAvailable = false };
                 Computer_Lab cl31 = new Computer_Lab()  {Location = "A6578", IsAvailable = true };
                 Computer_Lab cl32 = new Computer_Lab()  {Location = "A6579", IsAvailable = false };
@@ -126,16 +126,19 @@ namespace DataManagementCom
                 Computer_Lab cl36 = new Computer_Lab()  {Location = "C3467", IsAvailable = true };
 
                 //Exam 
-                Exam_Lab el1 = new Exam_Lab {CourseName = "Games Development L7 - Y2", TypeOfExam = "3D Game Programming",           YearGroup = "Year 2 Group B",  DateOfExam = new DateTime(2024, 12, 15, 10, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Neil Gannon"};
-                Exam_Lab el2 = new Exam_Lab {CourseName = "Games Development L7 - Y3", TypeOfExam = "Math 3",                        YearGroup = "Year 3 Group A",  DateOfExam = new DateTime(2024, 12, 15, 12, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Kieran Hughes" };
-                Exam_Lab el3 = new Exam_Lab {CourseName = "Games Development L7 - Y1", TypeOfExam = "Object Oriented Development",   YearGroup = "Year 1 Group C",  DateOfExam = new DateTime(2024, 12, 15, 09, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Keith McManus" };
-                Exam_Lab el4 = new Exam_Lab {CourseName = "Games Development L6 - Y2", TypeOfExam = "Software Quality and Testing",  YearGroup = "Year 2 Group D",  DateOfExam = new DateTime(2024, 12, 15, 01, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Vivion Kinsella" };
-                Exam_Lab el5 = new Exam_Lab {CourseName = "Games Development L6 - Y1", TypeOfExam = "Math 1",                        YearGroup = "Year 1 Group A",  DateOfExam = new DateTime(2024, 12, 15, 02, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Kieran Hughes" };
-                Exam_Lab el6 = new Exam_Lab {CourseName = "Games Development L8 - Y1", TypeOfExam = "Software Quality and Testing",  YearGroup = "Year 1 Group B",  DateOfExam = new DateTime(2024, 12, 15, 04, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Vivion Kinsella" };
-                Exam_Lab el7 = new Exam_Lab {CourseName = "Games Development L8 - Y2", TypeOfExam = "Object Oriented Development",   YearGroup = "Year 2 Group C",  DateOfExam = new DateTime(2024, 12, 15, 02, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Keith McManus" };
-                Exam_Lab el8 = new Exam_Lab {CourseName = "Games Development L8 - Y3", TypeOfExam = "Software Quality and Testing",  YearGroup = "Year 3 Group C",  DateOfExam = new DateTime(2024, 12, 15, 03, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Vivion Kinsella" };
-                Exam_Lab el9 = new Exam_Lab {CourseName = "Games Development L8 - Y4", TypeOfExam = "3D Game Programming",           YearGroup = "Year 4 Group A",  DateOfExam = new DateTime(2024, 12, 15, 05, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Neil Gannon" };
-                              
+                Exam_Lab el1 = new Exam_Lab  {CourseName = "Games Development Level 7",                     TypeOfExam = "Introduction to Programming 1",            YearGroup = "Year 1 Group A",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 10, 10, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Neil Gannon"};
+                Exam_Lab el2 = new Exam_Lab  {CourseName = "Games Development Level 7",                     TypeOfExam = "Mathematics 1",                            YearGroup = "Year 1 Group B",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 11, 12, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Kieran Hughes"};
+                Exam_Lab el3 = new Exam_Lab  {CourseName = "Games Development Level 7",                     TypeOfExam = "Design Thinking",                          YearGroup = "Year 1 Group C",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 12, 09, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Adrian Durcan"};
+                Exam_Lab el4 = new Exam_Lab  {CourseName = "Computer Networks and Cyber Security Level 8",  TypeOfExam = "Mathematics 1",                            YearGroup = "Year 1 Group A",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 13, 01, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Kieran Hughes"};
+                Exam_Lab el5 = new Exam_Lab  {CourseName = "Computer Networks and Cyber Security Level 8",  TypeOfExam = "Design Thinking",                          YearGroup = "Year 1 Group B",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 14, 02, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Adrian Durcan"};
+                Exam_Lab el6 = new Exam_Lab  {CourseName = "Computer Networks and Cyber Security Level 8",  TypeOfExam = "Introduction to Programming 1",            YearGroup = "Year 1 Group C",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 15, 04, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Neil Gannon"};
+                Exam_Lab el7 = new Exam_Lab  {CourseName = "Electronic and Computer Engineering Level 7",   TypeOfExam = "Mobile Applications Programming",          YearGroup = "Year 1 Group A",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 16, 02, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Keith McManus"};
+                Exam_Lab el8 = new Exam_Lab  {CourseName = "Electronic and Computer Engineering Level 7",   TypeOfExam = "Essential Lean Six Sigma and Validation",  YearGroup = "Year 1 Group B",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 17, 03, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Vivion Kinsella"};
+                Exam_Lab el9 = new Exam_Lab  {CourseName = "Electronic and Computer Engineering Level 7",   TypeOfExam = "Embedded System 1",                        YearGroup = "Year 1 Group C",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 18, 05, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Neil Gannon"};
+                Exam_Lab el10 = new Exam_Lab {CourseName = "Accounting Level 8",                            TypeOfExam = "Financial Reporting 1",                    YearGroup = "Year 1 Group A",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 19, 02, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Keith McManus"};
+                Exam_Lab el11 = new Exam_Lab {CourseName = "Accounting Level 8",                            TypeOfExam = "Business Law For Accountants 1",           YearGroup = "Year 1 Group B",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 20, 03, 00, 00),  LongOfTime = "1 Hours",  TeacherName = "Vivion Kinsella"};
+                Exam_Lab el12 = new Exam_Lab {CourseName = "Accounting Level 8",                            TypeOfExam = "Business Mathematics and Statistics 1",    YearGroup = "Year 1 Group C",  Semester = "Semester 1",  DateOfExam = new DateTime(2026, 05, 21, 05, 00, 00),  LongOfTime = "2 Hours",  TeacherName = "Neil Gannon"};
+
 
                 //Add the Computers into the Labs
                 Console.WriteLine(" ---------------------------------------------");
@@ -217,7 +220,6 @@ namespace DataManagementCom
                 cl24.Computers.Add(c72);
                 cl24.Computers.Add(c73);
 
-
                 //Add the Labs into the Exam_labs
                 Console.WriteLine("|---------------------------------------------|");
                 Console.WriteLine("| Adding the Computer Labs into the Exam Labs |");
@@ -246,6 +248,22 @@ namespace DataManagementCom
                 el8.ComputerLabs.Add(cl22);
                 el8.ComputerLabs.Add(cl23);
                 el8.ComputerLabs.Add(cl24);
+                el9.ComputerLabs.Add(cl25);
+                el9.ComputerLabs.Add(cl26);
+                el9.ComputerLabs.Add(cl27);
+                el10.ComputerLabs.Add(cl28);
+                el10.ComputerLabs.Add(cl29);
+                el10.ComputerLabs.Add(cl30);
+                el11.ComputerLabs.Add(cl31);
+                el11.ComputerLabs.Add(cl32);
+                el11.ComputerLabs.Add(cl33);
+                el12.ComputerLabs.Add(cl34);
+                el12.ComputerLabs.Add(cl35);
+                el12.ComputerLabs.Add(cl36);
+
+
+
+
 
                 //Add the Labs
                 Console.WriteLine("|---------------------------------------------|");
@@ -274,6 +292,10 @@ namespace DataManagementCom
                 db.Exam_Labs.Add(el7);
                 db.Exam_Labs.Add(el8);
                 db.Exam_Labs.Add(el9);
+                db.Exam_Labs.Add(el10);
+                db.Exam_Labs.Add(el11);
+                db.Exam_Labs.Add(el12);
+
 
                 //Save the changes into the Database
                 Console.WriteLine("|---------------------------------------------|");

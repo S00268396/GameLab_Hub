@@ -43,6 +43,7 @@ namespace WpfApp1
         public string CourseName { get; set; }
         public string YearGroup { get; set; }
         public string TypeOfExam { get; set; }
+        public string Semester { get; set; }
         public DateTime DateOfExam { get; set; }       
         public string LongOfTime { get; set; }
         public string TeacherName { get; set; }

@@ -135,10 +135,11 @@ namespace WpfApp1
                                                        CourseName = el.CourseName,
                                                        TypeOfExam = el.TypeOfExam,
                                                        YearGroup = el.YearGroup,
+                                                       Semester = el.Semester,
                                                        TeacherName = el.TeacherName,
                                                        DateOfexam = el.DateOfExam,
                                                        LongOfTime = el.LongOfTime,
-                                                       Labs = "Computer LabID: "+ c.Computer_LabID + " - Location: " + c.Location 
+                                                       Labs = "Computer LabID: "+ c.Computer_LabID +" - Location: " + c.Location 
                                                    }))
                                                   .ToList();
         }
@@ -178,6 +179,7 @@ namespace WpfApp1
                 sB.AppendLine($"Exam LabID:  {ExamSelected.Exam_LabID}");
                 sB.AppendLine($"Course Name:  {ExamSelected.CourseName}");
                 sB.AppendLine($"Year Group:  {ExamSelected.YearGroup}");
+                sB.AppendLine($"Semester: {ExamSelected.Semester}");
                 sB.AppendLine($"Type Of Exam:  {ExamSelected.TypeOfExam}");
                 sB.AppendLine($"Date Of Exam:  {ExamSelected.DateOfExam}");
                 sB.AppendLine($"Time:  {ExamSelected.LongOfTime}");
