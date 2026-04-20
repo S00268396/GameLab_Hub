@@ -331,20 +331,6 @@ namespace DataManagementCom
                 el12.ComputerLabs.Add(cl35);
                 el12.ComputerLabs.Add(cl36);
 
-                //Add the Labs
-                Console.WriteLine("|---------------------------------------------|");
-                Console.WriteLine("| Adding the Computer Labs into the Database  |");
-                Console.WriteLine("|---------------------------------------------|");
-                db.Computer_Labs.Add(cl1);
-                db.Computer_Labs.Add(cl2);
-                db.Computer_Labs.Add(cl3);
-                db.Computer_Labs.Add(cl4);
-                db.Computer_Labs.Add(cl5);
-                db.Computer_Labs.Add(cl6);
-                db.Computer_Labs.Add(cl7);
-                db.Computer_Labs.Add(cl8);
-                db.Computer_Labs.Add(cl9);
-
                 //Add the Exam_Labs
                 Console.WriteLine("|---------------------------------------------|");
                 Console.WriteLine("|  Adding the Exam Labs into the Database     |");
