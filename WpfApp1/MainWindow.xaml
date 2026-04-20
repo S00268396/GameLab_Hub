@@ -42,6 +42,8 @@
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
+
+                <!--Canvas-->
                 <Canvas Grid.ColumnSpan="5" Grid.RowSpan="5" Opacity="0.5">
                     <Canvas.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,1">
@@ -82,7 +84,7 @@
                 <materialDesign:Card Grid.Row="1" Grid.Column="1" Padding="15" Background="LightBlue">
                     <StackPanel>
                         <Border Background="LightBlue" Padding="10" CornerRadius="6" Margin="0,0,0,10">
-                            <TextBlock x:Name="tblRoominfo" TextWrapping="Wrap" Height="220" Text="RoomInfo" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold"/>
+                            <TextBlock x:Name="tblRoominfo" TextWrapping="Wrap" Height="440" Text="RoomInfo" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold"/>
                         </Border>                       
                     </StackPanel>
                 </materialDesign:Card>
@@ -127,6 +129,8 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>                    
                 </Grid.ColumnDefinitions>
+
+                <!--Canvas-->
                 <Canvas Grid.ColumnSpan="5" Grid.RowSpan="5" Opacity="0.5">
                     <Canvas.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,1">
@@ -194,7 +198,8 @@
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
-                
+
+                <!--Canvas-->
                 <Canvas Grid.ColumnSpan="5" Grid.RowSpan="5" Opacity="0.5">
                     <Canvas.Background>
                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,1">
@@ -206,18 +211,18 @@
                 
                 <!--Filters-->
                 <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,0,0,10" VerticalAlignment="Top" HorizontalAlignment="Center">
-                    <Label x:Name="lblTypeOfExam" Content="Exam:"/>
-                    <ComboBox x:Name="cmbxSearchExam" Width="120" Loaded="cmbxSearchExam_Loaded" Foreground="Black" SelectionChanged="cmbxSearchExam_SelectionChanged"/>
-                    <Label x:Name="lblYear" Content="Year:" FontWeight="Bold" Foreground="Black"/>
-                    <ComboBox x:Name="cmbxSearchYear" Width="120" Loaded="cmbxSearchYear_Loaded" Foreground="Black" SelectionChanged="cmbxSearchYear_SelectionChanged"/>
-                    <Label x:Name="lbCourse" Content="Course:" FontWeight="Bold" Foreground="Black"/>
-                    <ComboBox x:Name="cmbxSearchCourse" Width="120" Loaded="cmbxSearchCourse_Loaded" Foreground="Black" SelectionChanged="cmbxSearchCourse_SelectionChanged"/>
-                    <Label x:Name="lblTeacher" Content="Teacher:" FontWeight="Bold" Foreground="Black"/>
-                    <ComboBox x:Name="cmbxSearchTeacher" Width="120" Loaded="cmbxSearchTeacher_Loaded" Foreground="Black" SelectionChanged="cmbxSearchTeacher_SelectionChanged"/>
+                    <Label x:Name="lblTypeOfExam" Content="Exam:"  Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="cmbxSearchExam" Width="120"  Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold" Loaded="cmbxSearchExam_Loaded" SelectionChanged="cmbxSearchExam_SelectionChanged"/>
+                    <Label x:Name="lblYear" Content="Year:" Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="cmbxSearchYear" Width="120"  Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold" Loaded="cmbxSearchYear_Loaded" SelectionChanged="cmbxSearchYear_SelectionChanged"/>
+                    <Label x:Name="lbCourse" Content="Course:"  Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="cmbxSearchCourse" Width="120"  Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold" Loaded="cmbxSearchCourse_Loaded" SelectionChanged="cmbxSearchCourse_SelectionChanged"/>
+                    <Label x:Name="lblTeacher" Content="Teacher:"  Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold"/>
+                    <ComboBox x:Name="cmbxSearchTeacher" Width="120"  Margin="0,0,10,0" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold" Loaded="cmbxSearchTeacher_Loaded" SelectionChanged="cmbxSearchTeacher_SelectionChanged"/>
                 </StackPanel>
                 
                 <!--List of Exam Labs-->
-                <ListBox x:Name="lbxComputerExam" Grid.Row="1" Grid.Column="0" BorderThickness="1" Background="#FAFAFA" Foreground="Black" Padding="5" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxComputerExam_SelectionChanged">
+                <ListBox x:Name="lbxComputerExam" Grid.Row="1" Grid.Column="0" Margin="10,0,10,0" BorderThickness="1" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontWeight="SemiBold" FontSize="16" Padding="5" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="lbxComputerExam_SelectionChanged">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal" Margin="2">
@@ -229,16 +234,16 @@
                 </ListBox>
                 
                 <!--Exam and Exam Labs Info-->
-                <materialDesign:Card Grid.Row="1" Grid.Column="1" Padding="15" Margin="0,0,0,10" Background="#FAFAFA">
-                    <Border Background="#FAFAFA" Padding="10" CornerRadius="6" Margin="0,0,0,10">
-                      <TextBlock x:Name="tblExaminfo" TextWrapping="Wrap" FontWeight="SemiBold" Height="240" Foreground="Black" VerticalAlignment="Top" Text="ExamInfo"/>
+                <materialDesign:Card Grid.Row="1" Grid.Column="1" Padding="15" Margin="0,0,10,0" Background="LightBlue">
+                    <Border Background="Transparent" Padding="10" CornerRadius="6" Margin="0,0,0,10">
+                      <TextBlock x:Name="tblExaminfo" TextWrapping="Wrap" Height="440" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold" VerticalAlignment="Top" Text="ExamInfo"/>
                     </Border>
                 </materialDesign:Card>
 
                 <!--Buttons-->
-                <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-                    <Button x:Name="btnTimetable1" Content="Timetable" Background="#8000FF" Foreground="#FFFFFF" Margin="0,0,10,0" FontWeight="Bold" Padding="15,5" Click="btnTimetable1_Click"/>
-                    <Button x:Name="btnSearchSoftware" Content="Search Software" Background="#8000FF" Foreground="#FFFFFF" FontWeight="Bold" Padding="15,5" Click="btnSearchSoftware_Click"/>
+                <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,20,10">
+                    <Button x:Name="btnTimetable1" Content="Timetable" Background="LightBlue" Foreground="DarkBlue" Opacity="1" FontSize="16" FontWeight="SemiBold" Margin="0,0,10,0" Padding="15,5" Click="btnTimetable1_Click"/>
+                    <Button x:Name="btnSearchSoftware" Content="Search Software" Background="LightBlue" Foreground="DarkBlue" FontWeight="SemiBold" FontSize="16" Opacity="1" Padding="15,5" Click="btnSearchSoftware_Click"/>
                 </StackPanel>                
             </Grid>
         </TabItem>

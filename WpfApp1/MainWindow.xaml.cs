@@ -206,6 +206,7 @@ namespace WpfApp1
 
         private void cmbxSearchCourse_Loaded(object sender, RoutedEventArgs e)
         {
+            //This work but it show more the i
             var Course = CD.Exam_Labs.ToList();
 
             Course.Insert(0, new Exam_Lab { CourseName = "All Courses" });  
